@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="Login_AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+   <children>
+      <Pane layoutX="57.0" layoutY="19.0" prefHeight="682.0" prefWidth="1168.0" styleClass="Login_Pane" stylesheets="@../style/style.css">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <Pane layoutX="35.0" layoutY="14.0" prefHeight="654.0" prefWidth="503.0" styleClass="Login_img" stylesheets="@../style/style.css">
+               <children>
+                  <ImageView fitHeight="645.0" fitWidth="609.0" layoutX="3.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/Default_E_library_management_system_for_students_3.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="pane" layoutX="804.0" layoutY="96.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b8d8ff" height="560.0" stroke="#a2f3ff87" strokeType="OUTSIDE" styleClass="Login_txtPane" width="360.0" />
+            <Label layoutX="36.0" layoutY="55.0" prefHeight="58.0" prefWidth="296.0" text="LOGIN">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textUserName" layoutX="36.0" layoutY="128.0" prefHeight="26.0" prefWidth="296.0" promptText="Enter Your Username" />
+            <Button fx:id="btnLogin" layoutX="36.0" layoutY="235.0" mnemonicParsing="false" onAction="#btnloginOnAction" prefHeight="38.0" prefWidth="293.0" stylesheets="@../style/style.css" text="LOGIN">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="loginbtn" />
+               </styleClass>
+            </Button>
+            <Text layoutX="36.0" layoutY="105.83984375" strokeType="OUTSIDE" strokeWidth="0.0" text="Just Some Details to Get You In" wrappingWidth="217.049560546875">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="180.0" layoutY="384.05078125" strokeType="OUTSIDE" strokeWidth="0.0" text="or" wrappingWidth="22.13671875" />
+            <Line endX="382.3999938964844" endY="366.25079345703125" layoutX="-337.0" layoutY="14.0" startX="507.8000183105469" startY="366.25079345703125" />
+            <Line endX="382.3999938964844" endY="366.25079345703125" layoutX="-180.0" layoutY="14.0" startX="507.8000183105469" startY="366.25079345703125" />
+            <Text fx:id="txtTerms" layoutX="41.0" layoutY="452.05078125" strokeType="OUTSIDE" strokeWidth="0.0" text="Terms &amp; Conditions" wrappingWidth="107.73672485351562" />
+            <Text fx:id="txtSupport" layoutX="164.0" layoutY="452.05078125" strokeType="OUTSIDE" strokeWidth="0.0" text="Support" wrappingWidth="45.336700439453125" />
+            <Text fx:id="txtCCare" layoutX="225.0" layoutY="452.05078125" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Care" wrappingWidth="107.73672485351562" />
+            <CheckBox layoutX="37.0" layoutY="300.0" mnemonicParsing="false" text="Remember me" />
+            <PasswordField fx:id="txtPassword" layoutX="36.0" layoutY="176.0" prefHeight="26.0" prefWidth="296.0" promptText="Enter Your Password" />
+            <Hyperlink fx:id="txtForgotPassword" layoutX="35.0" layoutY="325.0" onAction="#txtForgotPasswordOnAction" prefHeight="24.0" prefWidth="198.0" text="Forgot Password?" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
