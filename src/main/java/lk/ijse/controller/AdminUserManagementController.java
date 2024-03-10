@@ -7,7 +7,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
-public class AdminBranchManagementController {
+public class AdminUserManagementController {
 
     @FXML
     private JFXButton btnAdd;
@@ -22,49 +22,34 @@ public class AdminBranchManagementController {
     private JFXButton btnUpdate;
 
     @FXML
-    private TableColumn<?, ?> colAddress;
+    private TableColumn<?, ?> colFirstName;
 
     @FXML
-    private TableColumn<?, ?> colBranchId;
+    private TableColumn<?, ?> colLastName;
 
     @FXML
-    private TableColumn<?, ?> colBranchName;
+    private TableColumn<?, ?> colPassword;
 
     @FXML
-    private TableColumn<?, ?> colCity;
+    private TableColumn<?, ?> colUserID;
 
     @FXML
-    private TableColumn<?, ?> colManagerId;
+    private TableColumn<?, ?> colUserName;
 
     @FXML
-    private TableColumn<?, ?> colPhoneNumber;
+    private TableView<?> tblUserManagement;
 
     @FXML
-    private TableColumn<?, ?> colStatus;
+    private TextField txtFirstName;
 
     @FXML
-    private TableView<?> tblBranchId;
+    private TextField txtLastName;
 
     @FXML
-    private TextField txtAddress;
+    private TextField txtPassword;
 
     @FXML
-    private TextField txtBranchId;
-
-    @FXML
-    private TextField txtBranchName;
-
-    @FXML
-    private TextField txtCity;
-
-    @FXML
-    private TextField txtManagerId;
-
-    @FXML
-    private TextField txtStatus;
-
-    @FXML
-    private TextField txtPhoneNum;
+    private TextField txtUserName;
 
     @FXML
     void btnAddOnAction(ActionEvent event) {

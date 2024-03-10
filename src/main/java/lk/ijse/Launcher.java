@@ -26,7 +26,7 @@ public class Launcher extends Application {
         stage.centerOnScreen();
 
 
-       // Session session = SessionFactoryConfig.getInstance().getSession();
+       Session session = SessionFactoryConfig.getInstance().getSession();
 
         stage.show();
     }

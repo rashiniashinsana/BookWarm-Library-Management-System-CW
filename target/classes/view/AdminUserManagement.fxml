@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="730.0" prefWidth="1189.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminUserManagementController">
+<AnchorPane prefHeight="730.0" prefWidth="1189.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminAuthorManagementController">
    <children>
       <Label layoutX="43.0" layoutY="38.0" text="USER MANAGEMENT" />
    </children>

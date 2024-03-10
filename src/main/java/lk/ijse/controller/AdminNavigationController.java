@@ -2,6 +2,8 @@ package lk.ijse.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -41,22 +43,47 @@ public class AdminNavigationController {
     private Pane btnAuthorManagement;
 
 
+    @FXML
+    private Pane btnUserManagement;
 
     @FXML
-    void btnEditProfileOnAction(MouseEvent event) {
+    private TableColumn<?, ?> colAuthor;
+
+    @FXML
+    private TableColumn<?, ?> colAvailability;
+
+    @FXML
+    private TableColumn<?, ?> colBookId;
+
+    @FXML
+    private TableColumn<?, ?> colISBN;
+
+    @FXML
+    private TableColumn<?, ?> colTitle;
+
+    @FXML
+    private TableView<?> tblBookDetails;
+
+
+    @FXML
+    void btnEditProfileOnAction(MouseEvent event) throws IOException {
+        NavigationPane.getChildren().clear();
+        NavigationPane.getChildren().add(FXMLLoader.load(this.getClass().getResource("/View/AdminAccountSettings.fxml")));
 
     }
 
     @FXML
-    void btnIssuedBooktOnAction(MouseEvent event) {
+    void btnIssuedBooktOnAction(MouseEvent event) throws IOException {
+        NavigationPane.getChildren().clear();
+        NavigationPane.getChildren().add(FXMLLoader.load(this.getClass().getResource("/View/AdminIssuedBookManagement.fxml")));
 
     }
 
     @FXML
-    void btnLogoutOnAction(MouseEvent event) {
-
+    void btnLogoutOnAction(MouseEvent event) throws IOException {
+        NavigationPane.getChildren().clear();
+        NavigationPane.getChildren().add(FXMLLoader.load(this.getClass().getResource("/View/AdminNavigation.fxml")));
     }
-
 
 
     @FXML

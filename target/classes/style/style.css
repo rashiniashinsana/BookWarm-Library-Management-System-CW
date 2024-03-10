@@ -117,7 +117,7 @@
     -fx-background-radius: 20;
     -fx-fill:   rgba(224,233,244,1);
 
-    -fx-effect: dropshadow(gaussian, rgb(158, 166, 176), 15, 0, 0, 0);
+    -fx-effect: dropshadow(gaussian, rgb(170, 188, 232), 15, 0, 0, 0);
 }
 .ReportDetails{
     -fx-background-color:  #f5f5f5;
@@ -141,10 +141,17 @@
 
 .Login_img{
     -fx-background-radius: 20;
-    -fx-border-style: solid
-;
+    -fx-border-style: solid;
+    -fx-border-color:  linear-gradient(to bottom, #00418b, #2f0080);
+    -fx-border-width: 2;
 }
 
+.Login_txtPane{
+    -fx-background-color:linear-gradient(to bottom, #2f0080,#00418b) ;
+    -fx-border-color: linear-gradient(to bottom, #2f0080,#00418b);
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+}
 
 .interPane{
     -fx-background-color: white;
@@ -177,4 +184,39 @@
     -fx-font: 14px "Arial";
     -fx-shadow-color: #DEDEDE;
     -fx-effect: dropshadow(gaussian, #e0fff7, 15, 0, 0, 0);
+}
+
+.SignUp_lbl {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+
+
+    example {
+        from {
+            background-color: red;
+        }
+        to {
+            background-color: yellow;
+        }
+    }
+}
+
+.AdminDashboard_Pane{
+    -fx-background-color:  linear-gradient(to bottom, rgb(155, 205, 254) 50%, rgb(130, 159, 238) 100% , rgb(155, 175, 234) 100%);
+
+    -fx-background-radius: 20;
+    -fx-fill:   rgba(224,233,244,1);
+
+    -fx-effect: dropshadow(gaussian, rgb(158, 166, 176), 15, 0, 0, 0);
+}
+
+.admin_pane{
+    -fx-background-color: linear-gradient(to bottom, #88cdff,transparent);
+    -fx-background-radius: 20;
+    -fx-fill:   rgba(224,233,244,1);
+
+    -fx-effect: dropshadow(gaussian, rgb(158, 166, 176), 15, 0, 0, 0);
 }

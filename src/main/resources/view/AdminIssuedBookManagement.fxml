@@ -1,14 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.controller.AdminIssuedBookManagementController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="730.0" prefWidth="1189.0" styleClass="Login_AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminIssuedBookManagementController">
+   <children>
+      <Label layoutX="55.0" layoutY="42.0" text="ISSUED BOOK MANAGEMENT">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblIssuedBooks" layoutX="105.0" layoutY="399.0" prefHeight="319.0" prefWidth="974.0">
+         <columns>
+            <TableColumn fx:id="colIssuedBookId" prefWidth="117.59998321533203" text="ISSUED BOOK ID" />
+            <TableColumn fx:id="colBookId" minWidth="0.0" prefWidth="114.39999389648438" text="BOOK ID" />
+            <TableColumn fx:id="colUserId" minWidth="0.0" prefWidth="106.39996337890625" text="USER ID" />
+            <TableColumn fx:id="colStatus" minWidth="0.0" prefWidth="151.99993896484375" text="STATUS" />
+            <TableColumn fx:id="colAmount" minWidth="0.0" prefWidth="144.79998779296875" text="FINE AMOUNT" />
+            <TableColumn fx:id="colReturnDate" prefWidth="108.800048828125" text="RETURN DATE" />
+            <TableColumn fx:id="colIssuedDate" prefWidth="112.79998779296875" text="ISSUED DATE" />
+            <TableColumn fx:id="colDueDate" prefWidth="115.99997558593748" text="DUE DATE" />
+         </columns>
+      </TableView>
+      <Pane layoutX="111.0" layoutY="119.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="246.0" prefWidth="973.0" styleClass="Login_Pane" stylesheets="@../style/style.css">
+         <children>
+            <Label layoutX="54.0" layoutY="85.0" prefHeight="22.0" prefWidth="77.0" text="BOOK ID :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtBookId" layoutX="134.0" layoutY="85.0" prefHeight="25.0" prefWidth="242.0" />
+            <Label layoutX="54.0" layoutY="136.0" prefHeight="22.0" prefWidth="77.0" text="USER ID :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="UserId" layoutX="134.0" layoutY="136.0" prefHeight="25.0" prefWidth="242.0" />
+            <Label layoutX="474.0" layoutY="89.0" prefHeight="22.0" prefWidth="106.0" text="ISSUE DATE :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtIssueDate" layoutX="595.0" layoutY="89.0" prefHeight="25.0" prefWidth="228.0" />
+            <Label layoutX="475.0" layoutY="37.0" prefHeight="22.0" prefWidth="116.0" text="RETURN DATE :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtReturnDate" layoutX="595.0" layoutY="37.0" prefHeight="25.0" prefWidth="228.0" />
+            <Label layoutX="475.0" layoutY="138.0" prefHeight="22.0" prefWidth="106.0" text="DUE DATE :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnAdd" layoutX="844.0" layoutY="36.0" onAction="#btnAddOnAction" prefHeight="27.0" prefWidth="77.0" text="ADD" />
+            <JFXButton fx:id="btnUpdate" layoutX="844.0" layoutY="81.0" onAction="#btnUpdateOnAction" prefHeight="27.0" prefWidth="77.0" text="UPDATE" />
+            <JFXButton fx:id="btnDelete" layoutX="844.0" layoutY="126.0" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="77.0" text="DELETE" />
+            <JFXButton fx:id="btnClear" layoutX="844.0" layoutY="171.0" onAction="#btnclearOnAction" prefHeight="27.0" prefWidth="77.0" text="CLEAR" />
+            <TextField fx:id="txtDueDate" layoutX="595.0" layoutY="138.0" prefHeight="25.0" prefWidth="228.0" />
+            <Label layoutX="54.0" layoutY="186.0" prefHeight="22.0" prefWidth="77.0" text="STATUS :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="476.0" layoutY="190.0" prefHeight="22.0" prefWidth="122.0" text="FINE AMOUNT :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtAmount" layoutX="598.0" layoutY="190.0" prefHeight="26.0" prefWidth="228.0" />
+            <TextField fx:id="txtStatus" layoutX="134.0" layoutY="186.0" prefHeight="25.0" prefWidth="242.0" />
+            <Label layoutX="65.0" layoutY="29.0" prefHeight="17.0" prefWidth="106.0" text="ISSUED BOOK ID :" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="58.0" fitWidth="61.0" layoutX="406.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/open-book%20(5).png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
