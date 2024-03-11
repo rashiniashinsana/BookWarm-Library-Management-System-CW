@@ -2,6 +2,7 @@
 
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -110,7 +111,7 @@
          </children></Pane>
       <Pane layoutX="207.0" layoutY="103.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="246.0" prefWidth="839.0" styleClass="admin_pane" stylesheets="@../style/style.css">
          <children>
-            <Pane layoutX="28.0" layoutY="57.0" prefHeight="62.0" prefWidth="188.0" style="-fx-background-color: #ecf0f1;" stylesheets="@../../../../../Completed%20Intellij/dog-care-clinic-layered-cw/src/main/resources/style/style.css">
+            <Pane layoutX="24.0" layoutY="69.0" prefHeight="104.0" prefWidth="188.0" style="-fx-background-color: #ecf0f1;" stylesheets="@../../../../../Completed%20Intellij/dog-care-clinic-layered-cw/src/main/resources/style/style.css">
                <children>
                   <ImageView fitHeight="49.0" fitWidth="51.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -137,13 +138,14 @@
                         <Font size="10.0" />
                      </font>
                   </Text>
+                  <Button fx:id="btnViewBooks" layoutX="17.0" layoutY="65.0" mnemonicParsing="false" onAction="#btnViewBooksOnAction" styleClass="search_button" stylesheets="@../style/style.css" text="View Books" />
                </children>
                <styleClass>
                   <String fx:value="rec_pane" />
                   <String fx:value="ReportPane" />
                </styleClass>
             </Pane>
-            <Pane layoutX="265.0" layoutY="57.0" prefHeight="62.0" prefWidth="188.0" style="-fx-background-color: #ecf0f1;" stylesheets="@../../../../../Completed%20Intellij/dog-care-clinic-layered-cw/src/main/resources/style/style.css">
+            <Pane layoutX="430.0" layoutY="73.0" prefHeight="104.0" prefWidth="188.0" style="-fx-background-color: #ecf0f1;" stylesheets="@../../../../../Completed%20Intellij/dog-care-clinic-layered-cw/src/main/resources/style/style.css">
                <children>
                   <ImageView fitHeight="49.0" fitWidth="51.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -176,7 +178,7 @@
                   <String fx:value="rec_pane" />
                </styleClass>
             </Pane>
-            <Pane layoutX="265.0" layoutY="140.0" prefHeight="62.0" prefWidth="188.0" style="-fx-background-color: #ecf0f1;" stylesheets="@../../../../../Completed%20Intellij/dog-care-clinic-layered-cw/src/main/resources/style/style.css">
+            <Pane layoutX="634.0" layoutY="74.0" prefHeight="104.0" prefWidth="188.0" style="-fx-background-color: #ecf0f1;" stylesheets="@../../../../../Completed%20Intellij/dog-care-clinic-layered-cw/src/main/resources/style/style.css">
                <children>
                   <ImageView fitHeight="49.0" fitWidth="51.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -209,7 +211,7 @@
                   <String fx:value="ReportPane" />
                </styleClass>
             </Pane>
-            <Pane layoutX="28.0" layoutY="141.0" prefHeight="62.0" prefWidth="188.0" style="-fx-background-color: #ecf0f1;" stylesheets="@../../../../../Completed%20Intellij/dog-care-clinic-layered-cw/src/main/resources/style/style.css">
+            <Pane layoutX="227.0" layoutY="71.0" prefHeight="104.0" prefWidth="188.0" style="-fx-background-color: #ecf0f1;" stylesheets="@../../../../../Completed%20Intellij/dog-care-clinic-layered-cw/src/main/resources/style/style.css">
                <children>
                   <ImageView fitHeight="49.0" fitWidth="51.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                      <image>
