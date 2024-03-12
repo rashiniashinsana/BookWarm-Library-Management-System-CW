@@ -25,25 +25,25 @@
       </TableView>
       <Pane layoutX="111.0" layoutY="119.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="246.0" prefWidth="973.0" styleClass="Login_Pane" stylesheets="@../style/style.css">
          <children>
-            <Label layoutX="54.0" layoutY="37.0" prefHeight="22.0" prefWidth="98.0" text="BRANCH ID :">
+            <Label layoutX="54.0" layoutY="60.0" prefHeight="22.0" prefWidth="98.0" text="BRANCH ID :">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txtBranchId" layoutX="191.0" layoutY="37.0" prefHeight="25.0" prefWidth="185.0" />
-            <Label layoutX="54.0" layoutY="88.0" prefHeight="22.0" prefWidth="122.0" text="BRANCH NAME :">
+            <TextField fx:id="txtBranchId" layoutX="191.0" layoutY="60.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="54.0" layoutY="111.0" prefHeight="22.0" prefWidth="122.0" text="BRANCH NAME :">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txtBranchName" layoutX="191.0" layoutY="88.0" prefHeight="25.0" prefWidth="185.0" />
-            <Label layoutX="474.0" layoutY="89.0" prefHeight="22.0" prefWidth="106.0" text="PHONE NUM :">
+            <TextField fx:id="txtBranchName" layoutX="191.0" layoutY="111.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="474.0" layoutY="112.0" prefHeight="22.0" prefWidth="106.0" text="PHONE NUM :">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txtPhoneNum" layoutX="595.0" layoutY="89.0" prefHeight="25.0" prefWidth="228.0" />
-            <Label layoutX="476.0" layoutY="138.0" prefHeight="22.0" prefWidth="90.0" text="STATUS :">
+            <TextField fx:id="txtPhoneNum" layoutX="595.0" layoutY="112.0" prefHeight="25.0" prefWidth="228.0" />
+            <Label layoutX="476.0" layoutY="161.0" prefHeight="22.0" prefWidth="90.0" text="STATUS :">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
@@ -52,19 +52,19 @@
             <JFXButton fx:id="btnUpdate" layoutX="844.0" layoutY="81.0" onAction="#btnUpdateOnAction" prefHeight="27.0" prefWidth="77.0" text="UPDATE" />
             <JFXButton fx:id="btnDelete" layoutX="844.0" layoutY="126.0" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="77.0" text="DELETE" />
             <JFXButton fx:id="btnClear" layoutX="844.0" layoutY="171.0" onAction="#btnClearOnAction" prefHeight="27.0" prefWidth="77.0" text="CLEAR" />
-            <TextField fx:id="txtStatus" layoutX="595.0" layoutY="138.0" prefHeight="25.0" prefWidth="228.0" />
-            <Label layoutX="54.0" layoutY="138.0" prefHeight="22.0" prefWidth="90.0" text="ADDRESS : ">
+            <TextField fx:id="txtStatus" layoutX="595.0" layoutY="161.0" prefHeight="25.0" prefWidth="228.0" />
+            <Label layoutX="54.0" layoutY="161.0" prefHeight="22.0" prefWidth="90.0" text="ADDRESS : ">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="478.0" layoutY="40.0" prefHeight="22.0" prefWidth="52.0" text="CITY :">
+            <Label layoutX="478.0" layoutY="63.0" prefHeight="22.0" prefWidth="52.0" text="CITY :">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txtCity" layoutX="594.0" layoutY="38.0" prefHeight="26.0" prefWidth="228.0" />
-            <TextField fx:id="txtAddress" layoutX="191.0" layoutY="138.0" prefHeight="25.0" prefWidth="185.0" />
+            <TextField fx:id="txtCity" layoutX="594.0" layoutY="61.0" prefHeight="26.0" prefWidth="228.0" />
+            <TextField fx:id="txtAddress" layoutX="191.0" layoutY="161.0" prefHeight="25.0" prefWidth="185.0" />
          </children>
       </Pane>
       <ImageView fitHeight="58.0" fitWidth="61.0" layoutX="370.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">

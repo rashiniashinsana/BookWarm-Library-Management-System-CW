@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1189.0" styleClass="Login_AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserBorrowedBookManagementController">
+    <children>
+        <Label layoutX="55.0" layoutY="42.0" text="BORROWED BOOK MANAGEMENT">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblBookManagement" layoutX="105.0" layoutY="399.0" prefHeight="319.0" prefWidth="974.0">
+            <columns>
+                <TableColumn fx:id="colCardNo" prefWidth="141.60000610351562" text="CARD NO" />
+                <TableColumn fx:id="colTitle" minWidth="0.0" prefWidth="247.19996643066406" text="TITLE" />
+                <TableColumn fx:id="colIsbn" minWidth="0.0" prefWidth="260.00006103515625" text="ISBN" />
+                <TableColumn fx:id="colDateBorrowed" minWidth="0.0" prefWidth="172.79998779296875" text=" DATE BORROWED" />
+                <TableColumn fx:id="colDueDate" minWidth="0.0" prefWidth="153.60003662109375" text="DUE DATE" />
+            </columns>
+        </TableView>
+        <Pane layoutX="108.0" layoutY="118.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="246.0" prefWidth="973.0" styleClass="Login_Pane" stylesheets="@../style/style.css">
+            <children>
+                <Label layoutX="54.0" layoutY="37.0" prefHeight="22.0" prefWidth="77.0" text="CARD NO :">
+                    <font>
+                        <Font name="Calibri" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="54.0" layoutY="108.0" prefHeight="18.0" prefWidth="61.0" text="TITLE :">
+                    <font>
+                        <Font name="Calibri" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="55.0" layoutY="177.0" prefHeight="18.0" prefWidth="61.0" text="ISBN :">
+                    <font>
+                        <Font name="Calibri" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="467.0" layoutY="38.0" prefHeight="22.0" prefWidth="141.0" text="DATE BORROWED :">
+                    <font>
+                        <Font name="Calibri" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtCardNo" layoutX="134.0" layoutY="37.0" prefHeight="25.0" prefWidth="242.0" />
+                <TextField fx:id="txtTitle" layoutX="134.0" layoutY="108.0" prefHeight="25.0" prefWidth="242.0" />
+                <TextField fx:id="txtIsbn" layoutX="134.0" layoutY="177.0" prefHeight="25.0" prefWidth="242.0" />
+                <TextField fx:id="txtDateBorrowed" layoutX="617.0" layoutY="37.0" prefHeight="25.0" prefWidth="183.0" />
+                <JFXButton fx:id="btnAdd" layoutX="844.0" layoutY="68.0" onAction="#btnAddOnAction" prefHeight="27.0" prefWidth="77.0" text="ADD" />
+                <JFXButton fx:id="btnUpdate" layoutX="844.0" layoutY="110.0" onAction="#btnUpdateOnAction" prefHeight="27.0" prefWidth="77.0" text="UPDATE" />
+                <JFXButton fx:id="btnDelete" layoutX="844.0" layoutY="153.0" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="77.0" text="DELETE" />
+                <JFXButton fx:id="btnClear" layoutX="844.0" layoutY="195.0" onAction="#btnClearOnAction" prefHeight="27.0" prefWidth="77.0" text="CLEAR" />
+            <JFXButton fx:id="btnSearch" layoutX="844.0" layoutY="24.0" onAction="#btnSearchOnAction" prefHeight="27.0" prefWidth="77.0" text="SEARCH" />
+            </children>
+        </Pane>
+        <ImageView fitHeight="58.0" fitWidth="61.0" layoutX="478.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/book%20(6).png" />
+            </image>
+        </ImageView>
+        <Label layoutX="577.0" layoutY="223.0" prefHeight="22.0" prefWidth="114.0" text="DUE DATE :">
+            <font>
+                <Font name="Calibri" size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtDueDate" layoutX="723.0" layoutY="223.0" prefHeight="26.0" prefWidth="183.0" />
+    </children>
+</AnchorPane>

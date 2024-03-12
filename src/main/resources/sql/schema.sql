@@ -10,122 +10,82 @@ CREATE TABLE user
 );
 
 
+CREATE TABLE admin_user
+(
+    User_ID   VARCHAR(5) PRIMARY KEY,
+    User_Name VARCHAR(25) NOT NULL,
+    Password   VARCHAR(12)  NOT NULL,
+    First_Name   VARCHAR(25),
+    Second_Name  VARCHAR(25)
+
+
+);
+
 CREATE TABLE book
 (
-    O_ID       VARCHAR(5) PRIMARY KEY,
-    Owner_Name VARCHAR(25) NOT NULL,
-    Contacts   VARCHAR(30)
+    Book_ID VARCHAR(5) PRIMARY KEY,
+    Title VARCHAR(25) NOT NULL,
+    Author   VARCHAR(25),
+    ISBN VARCHAR(25),
+    Available_Copies VARCHAR(5) NOT NULL
 );
 
 
-CREATE TABLE dog
+CREATE TABLE branch
 (
-    D_ID           VARCHAR(5) PRIMARY KEY,
-    D_Name         VARCHAR(25) NOT NULL,
-    Gender         ENUM ('Male', 'Female', 'Other'),
-    Breed          VARCHAR(255),
-    Age            VARCHAR(2),
-    O_ID           VARCHAR(255),
-    FOREIGN KEY (O_ID) REFERENCES owner (O_ID) ON DELETE CASCADE ON UPDATE CASCADE
-);
-
-CREATE TABLE employee
-(
-    Emp_ID   VARCHAR(5) PRIMARY KEY,
-    Emp_Name VARCHAR(255) NOT NULL,
-    NIC      VARCHAR(12)  NOT NULL,
-    Sex      ENUM ('Male', 'Female', 'Other'),
-    Contact  VARCHAR(15),
-    JobRole  VARCHAR(15)
-
+    Branch_ID VARCHAR(5) PRIMARY KEY,
+    Branch_Name    VARCHAR(25) NOT NULL,
+    Address        VARCHAR(25),
+    City           VARCHAR(10),
+    Phone_Number   VARCHAR(10),
+    Status         VARCHAR(25)
 
 );
 
 
-CREATE TABLE payment
+CREATE TABLE issued_book
 (
-    P_ID   VARCHAR(5) PRIMARY KEY,
-    Amount DECIMAL(5, 2),
-    Date DATE
-
+    Issued_Book_Id VARCHAR(5) PRIMARY KEY,
+    Book_ID VARCHAR(5),
+    User_ID VARCHAR(5),
+    Status VARCHAR(15),
+    Fine_Amount DOUBLE(5,2),
+    Return_Date DATE,
+    Issue_Date DATE,
+    Due_Date DATE,
+    FOREIGN KEY (Book_ID) REFERENCES book (Book_ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (User_ID) REFERENCES admin_user (User_ID) ON DELETE CASCADE ON UPDATE CASCADE
 
 );
 
-CREATE TABLE appointment
+
+CREATE TABLE user_history
 (
-    Appointment_ID VARCHAR(5) PRIMARY KEY,
-    O_ID           VARCHAR(5),
-    Emp_ID         VARCHAR(5),
-    Date           DATE,
-    Time           TIME,
-    purpose        VARCHAR(255) NOT NULL,
-    FOREIGN KEY (O_ID) REFERENCES owner (O_ID) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (Emp_ID) REFERENCES employee (Emp_ID) ON DELETE CASCADE ON UPDATE CASCADE
+    Card_No VARCHAR(5) PRIMARY KEY,
+    Title VARCHAR(25),
+    ISBN VARCHAR(25),
+    Date_Borrowed DATE,
+    Due_Date DATE,
+    Status VARCHAR(25)
 );
 
 
-CREATE TABLE treatment
+CREATE TABLE borrowed_books
 (
-    T_ID       VARCHAR(5) PRIMARY KEY,
-    Date       DATE,
-    Medication VARCHAR(255),
-    Diagnosis  VARCHAR(255),
-    P_ID       VARCHAR(5),
-    D_ID       VARCHAR(5),
-    FOREIGN KEY (P_ID) REFERENCES payment (P_ID) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (D_ID) REFERENCES dog (D_ID) ON DELETE CASCADE ON UPDATE CASCADE
-);
-
-
-CREATE TABLE record
-(
-    Record_ID      VARCHAR(5) PRIMARY KEY,
-    Description    VARCHAR(255),
-    Date            DATE
-);
-
-
-CREATE TABLE inventory
-(
-    Item_ID     VARCHAR(5) PRIMARY KEY,
-    Item_Name   VARCHAR(15),
-    Description VARCHAR(20),
-    Unit_Price  DOUBLE(5, 2),
-    Quantity    VARCHAR(5)
-);
-
-CREATE TABLE supplier
-(
-    Sup_ID       VARCHAR(5) PRIMARY KEY,
-    Sup_Name     VARCHAR(15),
-    Contact      VARCHAR(30),
-    Supplierment VARCHAR(30)
-);
-
-
-CREATE TABLE community_project
-(
-    Project_ID   VARCHAR(5) PRIMARY KEY,
-    Project_Name VARCHAR(15),
-    Date         DATE,
-    Location     VARCHAR(30)
-
-);
-
-CREATE TABLE inventory_details
-(
-    Item_ID VARCHAR(5),
-    Unit_Price double(5,2),
-    Quantity VARCHAR(5),
-    FOREIGN KEY (Item_ID) REFERENCES inventory (Item_ID) ON DELETE CASCADE ON UPDATE CASCADE
+    Card_No VARCHAR(5) PRIMARY KEY,
+    Title VARCHAR(25),
+    ISBN VARCHAR(25),
+    Date_Borrowed DATE,
+    Due_Date DATE,
+    Status VARCHAR(25)
 
 );
 
 CREATE TABLE login_details
 (
     username VARCHAR(20) ,
-    Emp_ID VARCHAR(5),
+    User_ID VARCHAR(5),
     FOREIGN KEY (username) REFERENCES user (username) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (Emp_ID) REFERENCES employee (Emp_ID) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (User_ID) REFERENCES admin_user (User_ID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
