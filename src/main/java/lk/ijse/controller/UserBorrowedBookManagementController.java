@@ -22,6 +22,9 @@ public class UserBorrowedBookManagementController {
     private JFXButton btnUpdate;
 
     @FXML
+    private JFXButton btnSearch;
+
+    @FXML
     private TableColumn<?, ?> colCardNo;
 
     @FXML
@@ -74,4 +77,8 @@ public class UserBorrowedBookManagementController {
 
     }
 
+    @FXML
+    void btnSearchOnAction(ActionEvent event) {
+
+    }
 }

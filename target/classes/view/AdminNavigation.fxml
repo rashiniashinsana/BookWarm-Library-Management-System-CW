@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="root" prefHeight="720.0" prefWidth="1280.0" styleClass="Login_AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminNavigationController">
+<AnchorPane fx:id="root" prefHeight="720.0" prefWidth="1280.0" styleClass="Login_AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminNavigationController">
    <children>
       <Pane layoutX="9.0" layoutY="8.0" prefHeight="730.0" prefWidth="87.0" style="-fx-background-color: white;" stylesheets="@../style/style.css">
          <children>
@@ -90,7 +88,166 @@
             </VBox>
          </children>
       </Pane>
-      <Pane fx:id="NavigationPane" layoutX="99.0" layoutY="8.0" prefHeight="730.0" prefWidth="1189.0" style="-fx-background-color: white;" stylesheets="@../style/style.css" />
+      <Pane fx:id="NavigationPane" layoutX="104.0" layoutY="8.0" prefHeight="730.0" prefWidth="1189.0" styleClass="AdminDashboard_Pane" stylesheets="@../style/style.css">
+         <children>
+            <Label layoutX="76.0" layoutY="32.0" text="DASHBOARD">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="366.0" fitWidth="353.0" layoutX="603.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="235.0" fitWidth="196.0" layoutX="965.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/book%20(1).png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Pane layoutX="207.0" layoutY="103.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="246.0" prefWidth="839.0" styleClass="admin_pane" stylesheets="@../style/style.css">
+         <children>
+            <Pane layoutX="24.0" layoutY="69.0" prefHeight="104.0" prefWidth="188.0" style="-fx-background-color: #ecf0f1;" stylesheets="@../../../../../library-management-cw/src/main/resources/style/style.css">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="51.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/open-book%20(4).png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="62.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Books" wrappingWidth="75.2958984375">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text fontSmoothingType="LCD" layoutX="69.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="13457" wrappingWidth="51.060546875">
+                     <font>
+                        <Font name="Consolas Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="137.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/analysis%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="126.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Today : 34" wrappingWidth="61.3564453125">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="btnViewBooks" layoutX="17.0" layoutY="65.0" mnemonicParsing="false" onMouseClicked="#btnViewBooksOnAction" styleClass="search_button" stylesheets="@../style/style.css" text="View Books" />
+               </children>
+               <styleClass>
+                  <String fx:value="rec_pane" />
+                  <String fx:value="ReportPane" />
+               </styleClass>
+            </Pane>
+            <Pane layoutX="430.0" layoutY="73.0" prefHeight="104.0" prefWidth="188.0" style="-fx-background-color: #ecf0f1;" stylesheets="@../../../../../library-management-cw/src/main/resources/style/style.css">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="51.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/international.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="62.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Branches" wrappingWidth="75.2958984375">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text fontSmoothingType="LCD" layoutX="69.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="97" wrappingWidth="51.060546875">
+                     <font>
+                        <Font name="Consolas Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="137.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/analysis%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="126.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Today : 89" wrappingWidth="61.3564453125">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+               </children>
+               <styleClass>
+                  <String fx:value="ReportPane" />
+                  <String fx:value="rec_pane" />
+               </styleClass>
+            </Pane>
+            <Pane layoutX="634.0" layoutY="74.0" prefHeight="104.0" prefWidth="188.0" style="-fx-background-color: #ecf0f1;" stylesheets="@../../../../../library-management-cw/src/main/resources/style/style.css">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="51.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/group.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="62.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" wrappingWidth="75.2958984375">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text fontSmoothingType="LCD" layoutX="69.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1895" wrappingWidth="51.060546875">
+                     <font>
+                        <Font name="Consolas Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="137.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/analysis%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="126.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Today : 3" wrappingWidth="61.3564453125">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+               </children>
+               <styleClass>
+                  <String fx:value="rec_pane" />
+                  <String fx:value="ReportPane" />
+               </styleClass>
+            </Pane>
+            <Pane layoutX="227.0" layoutY="71.0" prefHeight="104.0" prefWidth="188.0" style="-fx-background-color: #ecf0f1;" stylesheets="@../../../../../library-management-cw/src/main/resources/style/style.css">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="51.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/open-book%20(5).png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="62.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Issued Books" wrappingWidth="75.2958984375">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text fontSmoothingType="LCD" layoutX="69.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2367" wrappingWidth="51.060546875">
+                     <font>
+                        <Font name="Consolas Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="137.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/analysis%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="126.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Today : 10" wrappingWidth="61.3564453125">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+               </children>
+               <styleClass>
+                  <String fx:value="rec_pane" />
+                  <String fx:value="ReportPane" />
+               </styleClass>
+            </Pane>
+         </children>
+      </Pane>
+      <TableView fx:id="tblBookDetails" layoutX="199.0" layoutY="360.0" prefHeight="366.0" prefWidth="852.0">
+         <columns>
+            <TableColumn fx:id="colBookId" prefWidth="150.4000244140625" text="BOOK ID" />
+            <TableColumn fx:id="colTitle" prefWidth="183.20001220703125" text="TITLE" />
+            <TableColumn fx:id="colAuthor" minWidth="0.0" prefWidth="207.199951171875" text="AUTHOR" />
+            <TableColumn fx:id="colISBN" minWidth="0.0" prefWidth="169.60009765625" text="ISBN" />
+            <TableColumn fx:id="colAvalability" prefWidth="139.20001220703125" text="AVAILABILITY" />
+         </columns>
+      </TableView>
    </children>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

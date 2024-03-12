@@ -45,4 +45,6 @@ public class LoginFormController {
 
     }
 
+    public void txtLoginOnAction(ActionEvent actionEvent) {
+    }
 }

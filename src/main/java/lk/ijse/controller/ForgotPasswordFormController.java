@@ -12,7 +12,7 @@ import javafx.scene.shape.Rectangle;
 public class ForgotPasswordFormController {
 
     @FXML
-    private Rectangle forgotpasswordPane;
+    private Rectangle forgotPasswordPane;
 
     @FXML
     private AnchorPane loginPane;

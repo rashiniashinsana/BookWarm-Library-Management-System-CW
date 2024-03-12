@@ -16,13 +16,14 @@ public class UserNavigationController {
     private Pane btnBorrow;
 
     @FXML
-    private Pane btnCatalog;
+    private Pane btnHistory;
 
     @FXML
     private Pane btnLogout;
 
     @FXML
     private Pane btnOverView;
+
 
     @FXML
     void btnAccountSettingOnAction(MouseEvent event) {
@@ -35,7 +36,12 @@ public class UserNavigationController {
     }
 
     @FXML
-    void btnCatalogManagementOnAction(MouseEvent event) {
+    void btnEditOnAction(MouseEvent event) {
+
+    }
+
+    @FXML
+    void btnHistoryManagementOnAction(MouseEvent event) {
 
     }
 
@@ -49,4 +55,6 @@ public class UserNavigationController {
 
     }
 
+    public void btnReturnOnAction(MouseEvent mouseEvent) {
+    }
 }

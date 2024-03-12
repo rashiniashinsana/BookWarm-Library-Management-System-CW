@@ -8,13 +8,13 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="730.0" prefWidth="1189.0" styleClass="Login_AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminAccountSettingController">
+<AnchorPane prefHeight="730.0" prefWidth="1189.0" styleClass="Login_AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserAccountSettingController">
    <children>
-      <Pane layoutX="264.0" layoutY="91.0" prefHeight="580.0" prefWidth="625.0" styleClass="Profile_Pane" stylesheets="@../style/style.css">
+      <Pane layoutX="259.0" layoutY="101.0" prefHeight="576.0" prefWidth="641.0" styleClass="user_pane" stylesheets="@../style/style.css">
          <children>
-            <ImageView fitHeight="633.0" fitWidth="882.0" layoutX="-3.0" layoutY="-30.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="576.0" fitWidth="444.0" layoutX="98.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/Default_library_management_system_2.jpg" />
+                  <Image url="@../assets/Default_E_library_management_system_for_students_0.jpg" />
                </image>
             </ImageView>
             <Label layoutX="221.0" layoutY="32.0" prefHeight="42.0" prefWidth="206.0" text="ACCOUNT SETTINGS">
@@ -116,6 +116,20 @@
                   <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="15.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../assets/search-location.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="105.0" layoutY="497.0" prefHeight="42.0" prefWidth="432.0" styleClass="Account_Setting_Pane" stylesheets="@../style/style.css">
+               <children>
+                  <Label layoutX="56.0" layoutY="6.0" prefHeight="29.0" prefWidth="187.0" text="Contacts Information">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="15.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/form.png" />
                      </image>
                   </ImageView>
                </children>

@@ -85,7 +85,7 @@ public class AdminIssuedBookManagementController {
     }
 
     @FXML
-    void btnclearOnAction(ActionEvent event) {
+    void btnClearOnAction(ActionEvent event) {
 
     }
 

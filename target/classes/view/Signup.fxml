@@ -53,7 +53,7 @@
       </Label>
       <TextField fx:id="textUserName" layoutX="839.0" layoutY="207.0" prefHeight="26.0" prefWidth="296.0" promptText="Enter Your Username" />
       <TextField fx:id="txtEmail" layoutX="839.0" layoutY="243.0" prefHeight="26.0" prefWidth="296.0" promptText="E mail" />
-      <Button fx:id="btnSignUp" defaultButton="true" layoutX="840.0" layoutY="371.0" mnemonicParsing="false" onAction="#btnSignOnAction" prefHeight="38.0" prefWidth="293.0" style="-fx-background-color: 8987FF;" styleClass="signupbtn" stylesheets="@../../../../../Completed%20Intellij/dog-care-clinic-layered-cw/src/main/resources/style/style.css" text="SIGN UP">
+      <Button fx:id="btnSignUp" defaultButton="true" layoutX="840.0" layoutY="371.0" mnemonicParsing="false" onAction="#btnSignOnAction" prefHeight="38.0" prefWidth="293.0" style="-fx-background-color: #8987FF;" styleClass="signupbtn" stylesheets="@../../../../../library-management-cw/src/main/resources/style/style.css" text="SIGN UP">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

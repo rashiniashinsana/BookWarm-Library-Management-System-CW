@@ -259,3 +259,21 @@
     -fx-border-radius: 5;
     -fx-background-radius: 5;
 }
+
+.Account_Setting_Pane{
+    -fx-border-color:linear-gradient(to bottom, #9bcdfe, #003780);
+    -fx-border-radius: 10;
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgb(93, 93, 93), 15, 0, 0, 0);
+
+}
+
+.user_pane{
+    -fx-border-radius: 10;
+    -fx-border-color: #7f8c8d;
+    -fx-background-radius: 10;
+    -fx-background-color:transparent ;
+}
