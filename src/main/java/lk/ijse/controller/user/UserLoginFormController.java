@@ -1,4 +1,4 @@
-package lk.ijse.controller;
+package lk.ijse.controller.user;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,7 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
-public class LoginFormController {
+public class UserLoginFormController {
 
     @FXML
     private Button btnLogin;
@@ -30,13 +30,16 @@ public class LoginFormController {
     private PasswordField txtPassword;
 
     @FXML
+    private Hyperlink txtSignUp;
+
+    @FXML
     private Text txtSupport;
 
     @FXML
     private Text txtTerms;
 
     @FXML
-    void btnloginOnAction(ActionEvent event) {
+    void btnLoginOnAction(ActionEvent event) {
 
     }
 
@@ -45,6 +48,9 @@ public class LoginFormController {
 
     }
 
-    public void txtLoginOnAction(ActionEvent actionEvent) {
+    @FXML
+    void txtSignUpOnAction(ActionEvent event) {
+
     }
+
 }

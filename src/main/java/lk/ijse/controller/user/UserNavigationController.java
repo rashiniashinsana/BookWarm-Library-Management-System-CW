@@ -1,6 +1,7 @@
 package lk.ijse.controller.user;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
@@ -16,6 +17,9 @@ public class UserNavigationController {
     private Pane btnBorrow;
 
     @FXML
+    private Button btnEdit;
+
+    @FXML
     private Pane btnHistory;
 
     @FXML
@@ -24,6 +28,8 @@ public class UserNavigationController {
     @FXML
     private Pane btnOverView;
 
+    @FXML
+    private Button btnReturn;
 
     @FXML
     void btnAccountSettingOnAction(MouseEvent event) {
@@ -55,6 +61,9 @@ public class UserNavigationController {
 
     }
 
-    public void btnReturnOnAction(MouseEvent mouseEvent) {
+    @FXML
+    void btnReturnOnAction(MouseEvent event) {
+
     }
+
 }

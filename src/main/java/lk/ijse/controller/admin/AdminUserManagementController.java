@@ -49,10 +49,18 @@ public class AdminUserManagementController {
     private TextField txtPassword;
 
     @FXML
+    private TextField txtSearch;
+
+    @FXML
     private TextField txtUserName;
 
     @FXML
     void btnAddOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnClearOnAction(ActionEvent event) {
 
     }
 
@@ -62,12 +70,12 @@ public class AdminUserManagementController {
     }
 
     @FXML
-    void btnUpdateOnAction(ActionEvent event) {
+    void btnSearchOnAction(ActionEvent event) {
 
     }
 
     @FXML
-    void btnClearOnAction(ActionEvent event) {
+    void btnUpdateOnAction(ActionEvent event) {
 
     }
 

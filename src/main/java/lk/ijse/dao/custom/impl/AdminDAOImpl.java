@@ -1,14 +1,15 @@
 package lk.ijse.dao.custom.impl;
-import javafx.collections.ObservableList;
 import lk.ijse.config.SessionFactoryConfig;
 import lk.ijse.dao.custom.AdminDAO;
-import lk.ijse.dto.AdminDTO;
 import lk.ijse.entity.Admin;
+import lk.ijse.entity.Book;
+import lk.ijse.entity.Branch;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.List;
+
 
 public class AdminDAOImpl implements AdminDAO {
     @Override
@@ -32,12 +33,12 @@ public class AdminDAOImpl implements AdminDAO {
     }
 
     @Override
-    public Admin search(String id) throws Exception {
+    public Book search(String id) throws Exception {
         return null;
     }
 
     @Override
-    public ObservableList<Admin> loadAll() throws Exception {
+    public List<Branch> loadAll() throws Exception {
         return null;
     }
 

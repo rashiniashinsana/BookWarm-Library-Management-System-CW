@@ -15,13 +15,13 @@
    <children>
       <Pane layoutX="9.0" layoutY="6.0" prefHeight="730.0" prefWidth="87.0" style="-fx-background-color: white;" stylesheets="@../style/style.css">
          <children>
-            <VBox alignment="TOP_CENTER" layoutX="6.0" prefHeight="730.0" prefWidth="75.0" spacing="10.0">
+            <VBox alignment="TOP_CENTER" layoutX="6.0" prefHeight="730.0" prefWidth="75.0" spacing="10.0" stylesheets="@../../style/style.css">
                <children>
                   <Pane fx:id="btnOverView" onMouseClicked="#btnOverViewOnAction" prefHeight="70.0" prefWidth="54.0" style="-fx-background-color: lightblue;" styleClass="button_pane" stylesheets="@../style/style.css">
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../assets/book%20(5).png" />
+                              <Image url="@../../assets/book%20(5).png" />
                            </image>
                         </ImageView>
                         <Label layoutX="10.0" layoutY="35.0" prefHeight="35.0" prefWidth="42.0" text=" BOOK    WARM" wrapText="true">
@@ -35,7 +35,7 @@
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../assets/time-past.png" />
+                              <Image url="@../../assets/time-past.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -44,7 +44,7 @@
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../assets/book%20(3).png" />
+                              <Image url="@../../assets/book%20(3).png" />
                            </image>
                         </ImageView>
                      </children>
@@ -53,7 +53,7 @@
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../assets/settings%20(1).png" />
+                              <Image url="@../../assets/settings%20(1).png" />
                            </image>
                         </ImageView>
                      </children>
@@ -62,7 +62,7 @@
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../assets/logout%20(2).png" />
+                              <Image url="@../../assets/logout%20(2).png" />
                            </image>
                         </ImageView>
                      </children>
@@ -74,7 +74,7 @@
             </VBox>
          </children>
       </Pane>
-      <Pane fx:id="NavigationPane" layoutX="99.0" layoutY="7.0" prefHeight="730.0" prefWidth="1189.0" styleClass="Login_Pane" stylesheets="@../style/style.css">
+      <Pane fx:id="NavigationPane" layoutX="99.0" layoutY="7.0" prefHeight="730.0" prefWidth="1189.0" styleClass="Login_Pane" stylesheets="@../../style/style.css">
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
@@ -97,7 +97,7 @@
                      <children>
                         <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="40.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../assets/user%20(5).png" />
+                              <Image url="@../../assets/user%20(5).png" />
                            </image>
                         </ImageView>
                         <Label layoutX="119.0" layoutY="48.0" prefHeight="25.0" prefWidth="133.0" text="Rashini Vithanage">
@@ -137,8 +137,14 @@
                   </Label>
                </children>
             </Pane>
-            <Label layoutX="876.0" layoutY="39.0" text="Date" />
-            <Label layoutX="876.0" layoutY="91.0" text="Time" />
+            <Label layoutX="876.0" layoutY="39.0" text="Date">
+               <font>
+                  <Font size="21.0" />
+               </font></Label>
+            <Label layoutX="876.0" layoutY="91.0" text="Time">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
          </children>
       </Pane>
    </children>

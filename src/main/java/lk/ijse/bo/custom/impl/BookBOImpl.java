@@ -1,5 +1,6 @@
 package lk.ijse.bo.custom.impl;
 
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
@@ -47,7 +48,7 @@ public class BookBOImpl implements BookBO {
         Book book = bookDAO.search(id);
         if (book != null){
             return new BookDTO(
-                    book.getBranch(),
+                    book.getBranchName(),
                     book.getTitle(),
                     book.getAuthor(),
                     book.getGenre(),
@@ -64,7 +65,7 @@ public class BookBOImpl implements BookBO {
         for (Book book : bookList){
             bookDTOS.add(new BookDTO(
                     book.getId(),
-                    book.getBranch(),
+                    book.getBranchName(),
                     book.getTitle(),
                     book.getAuthor(),
                     book.getGenre(),
@@ -82,7 +83,7 @@ public class BookBOImpl implements BookBO {
         for (Book book : bookList){
             bookDTOS.add(new BookDTO(
                     book.getId(),
-                    book.getBranch(),
+                    book.getBranchName(),
                     book.getTitle(),
                     book.getAuthor(),
                     book.getGenre(),
@@ -100,7 +101,7 @@ public class BookBOImpl implements BookBO {
         for (Book book : bookList) {
             bookDTOS.add(new BookDTO(
                     book.getId(),
-                    book.getBranch(),
+                    book.getBranchName(),
                     book.getTitle(),
                     book.getAuthor(),
                     book.getGenre(),

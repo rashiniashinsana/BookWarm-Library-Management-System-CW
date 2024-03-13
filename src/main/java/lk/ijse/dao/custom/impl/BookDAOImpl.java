@@ -5,6 +5,7 @@ import javafx.collections.*;
 import lk.ijse.config.SessionFactoryConfig;
 import lk.ijse.dao.custom.BookDAO;
 import lk.ijse.entity.Book;
+import lk.ijse.entity.Branch;
 import org.hibernate.*;
 import org.hibernate.query.Query;
 
@@ -43,7 +44,7 @@ public class BookDAOImpl implements BookDAO {
         Transaction updateTransaction = updateSession.beginTransaction();
         Book existingBook = updateSession.get(Book.class, id);
         if (existingBook!= null) {
-            existingBook.setBranch(dto.getBranch());
+            existingBook.setBranchName(dto.getBranchName());
             existingBook.setTitle(dto.getTitle());
             existingBook.setAuthor(dto.getAuthor());
             existingBook.setGenre(dto.getGenre());
@@ -70,7 +71,7 @@ public class BookDAOImpl implements BookDAO {
     }
 
     @Override
-    public ObservableList<Book> loadAll() {
+    public List<Branch> loadAll() {
         ObservableList<Book> allBookList = FXCollections.observableArrayList();
         Session loadSession = SessionFactoryConfig.getInstance().getSession();
         CriteriaQuery<Book> criteriaQuery = loadSession.getCriteriaBuilder().createQuery(Book.class);
@@ -85,7 +86,7 @@ public class BookDAOImpl implements BookDAO {
     public ObservableList<Book> getAllBooks(String branch) {
         ObservableList<Book> allBookList = FXCollections.observableArrayList();
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
-            Query<Book> query = session.createQuery("FROM Book WHERE branch = :branch", Book.class);
+            Query<Book> query = session.createQuery("FROM Book WHERE branchName = :branch", Book.class);
             query.setParameter("branch", branch);
             allBookList.addAll(query.getResultList());
         } catch (Exception e) {

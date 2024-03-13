@@ -5,13 +5,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import lk.ijse.config.SessionFactoryConfig;
 import lk.ijse.dao.custom.TransactionDAO;
+import lk.ijse.entity.Book;
+import lk.ijse.entity.Branch;
 import lk.ijse.entity.Transaction;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
-
-
-import java.sql.Date;
-import java.time.LocalDate;
+import java.util.List;
+//import org.hibernate.Transaction;
 
 public class TransactionDAOImpl implements TransactionDAO{
 
@@ -36,12 +36,12 @@ public class TransactionDAOImpl implements TransactionDAO{
     }
 
     @Override
-    public Transaction search(String id) throws Exception {
+    public Book search(String id) throws Exception {
         return null;
     }
 
     @Override
-    public ObservableList<Transaction> loadAll() throws Exception {
+    public List<Branch> loadAll() throws Exception {
         return null;
     }
 
@@ -62,7 +62,8 @@ public class TransactionDAOImpl implements TransactionDAO{
     @Override
     public boolean updateStatus(int id, String status) {
         Session updateSession = SessionFactoryConfig.getInstance().getSession();
-        Transaction updateTransaction = (Transaction) updateSession.beginTransaction();
+        org.hibernate.Transaction updateTransaction = updateSession.beginTransaction();
+        //Transaction updateTransaction = (Transaction) updateSession.beginTransaction();
         Transaction existingTransaction = updateSession.get(Transaction.class, id);
         if (existingTransaction!= null) {
             existingTransaction.setStatus(status);

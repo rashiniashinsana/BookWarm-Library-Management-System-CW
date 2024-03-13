@@ -28,19 +28,13 @@ public class AdminBranchManagementController {
     private TableColumn<?, ?> colBranchId;
 
     @FXML
+    private TableColumn<?, ?> colBranchManager;
+
+    @FXML
     private TableColumn<?, ?> colBranchName;
 
     @FXML
-    private TableColumn<?, ?> colCity;
-
-    @FXML
-    private TableColumn<?, ?> colManagerId;
-
-    @FXML
-    private TableColumn<?, ?> colPhoneNumber;
-
-    @FXML
-    private TableColumn<?, ?> colStatus;
+    private TableColumn<?, ?> colEmail;
 
     @FXML
     private TableView<?> tblBranchId;
@@ -49,25 +43,24 @@ public class AdminBranchManagementController {
     private TextField txtAddress;
 
     @FXML
-    private TextField txtBranchId;
+    private TextField txtBranchManager;
 
     @FXML
     private TextField txtBranchName;
 
     @FXML
-    private TextField txtCity;
-
-    @FXML
-    private TextField txtManagerId;
-
-    @FXML
-    private TextField txtStatus;
-
-    @FXML
     private TextField txtPhoneNum;
 
     @FXML
+    private TextField txtSearch;
+
+    @FXML
     void btnAddOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnClearOnAction(ActionEvent event) {
 
     }
 
@@ -77,12 +70,12 @@ public class AdminBranchManagementController {
     }
 
     @FXML
-    void btnUpdateOnAction(ActionEvent event) {
+    void btnSearchOnAction(ActionEvent event) {
 
     }
 
     @FXML
-    void btnClearOnAction(ActionEvent event) {
+    void btnUpdateOnAction(ActionEvent event) {
 
     }
 

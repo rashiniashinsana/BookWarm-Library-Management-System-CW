@@ -16,9 +16,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="Login_AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.user.SignupFormController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="Login_AnchorPane" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.user.SignupFormController">
    <children>
-      <Pane layoutX="68.0" layoutY="9.0" prefHeight="702.0" prefWidth="1184.0" styleClass="Login_Pane" stylesheets="@../style/style.css">
+      <Pane layoutX="68.0" layoutY="9.0" prefHeight="702.0" prefWidth="1184.0" styleClass="Login_Pane" stylesheets="@../../style/style.css">
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
@@ -30,12 +30,12 @@
             </ImageView>
             <ImageView fitHeight="604.0" fitWidth="236.0" layoutX="103.0" layoutY="70.0" opacity="0.81" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/Default_library_full_with_childrens_reading_books_1.jpg" />
+                  <Image url="@../../assets/Default_library_full_with_childrens_reading_books_1.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="472.0" fitWidth="344.0" layoutX="339.0" layoutY="70.0" opacity="0.81" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/Default_library_full_with_childrens_reading_books_3.jpg" />
+                  <Image url="@../../assets/Default_library_full_with_childrens_reading_books_3.jpg" />
                </image>
             </ImageView>
             <Label layoutX="45.0" layoutY="566.0" prefHeight="38.0" prefWidth="322.0" styleClass="SignUp_lbl" stylesheets="@../style/style.css" text="LIBRARAY TIMING    Open : 9.00 AM   Close : 12.00 PM  ">

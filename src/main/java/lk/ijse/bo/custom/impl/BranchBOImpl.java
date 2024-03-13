@@ -1,6 +1,5 @@
 package lk.ijse.bo.custom.impl;
 
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import lk.ijse.bo.custom.BranchBO;

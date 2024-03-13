@@ -1,139 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="730.0" prefWidth="1189.0" styleClass="Login_AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.user.UserAccountSettingController">
+<AnchorPane prefHeight="730.0" prefWidth="1189.0" styleClass="Login_AnchorPane" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.user.UserAccountSettingController">
    <children>
       <Pane layoutX="259.0" layoutY="101.0" prefHeight="576.0" prefWidth="641.0" styleClass="user_pane" stylesheets="@../style/style.css">
          <children>
-            <ImageView fitHeight="576.0" fitWidth="444.0" layoutX="98.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="556.0" fitWidth="444.0" layoutX="98.0" layoutY="10.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/Default_E_library_management_system_for_students_0.jpg" />
                </image>
             </ImageView>
-            <Label layoutX="221.0" layoutY="32.0" prefHeight="42.0" prefWidth="206.0" text="ACCOUNT SETTINGS">
+            <Label layoutX="221.0" layoutY="32.0" prefHeight="42.0" prefWidth="206.0" text="ACCOUNT SETTINGS" textFill="#382d76">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Pane layoutX="103.0" layoutY="117.0" prefHeight="42.0" prefWidth="432.0" styleClass="Account_Setting_Pane" stylesheets="@../style/style.css">
-               <children>
-                  <Label layoutX="55.0" layoutY="6.0" prefHeight="29.0" prefWidth="187.0" text="User Name ">
-                     <font>
-                        <Font name="System Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="33.0" fitWidth="22.0" layoutX="15.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/id-card-clip-alt.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </Pane>
-            <Pane layoutX="103.0" layoutY="170.0" prefHeight="42.0" prefWidth="432.0" styleClass="Account_Setting_Pane" stylesheets="@../style/style.css">
-               <children>
-                  <Label layoutX="55.0" layoutY="7.0" prefHeight="29.0" prefWidth="187.0" text="Password">
-                     <font>
-                        <Font name="System Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="29.0" fitWidth="22.0" layoutX="15.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/key.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </Pane>
-            <Pane layoutX="103.0" layoutY="223.0" prefHeight="42.0" prefWidth="432.0" styleClass="Account_Setting_Pane" stylesheets="@../style/style.css">
-               <children>
-                  <Label layoutX="56.0" layoutY="6.0" prefHeight="29.0" prefWidth="187.0" text="Profile Picture">
-                     <font>
-                        <Font name="System Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="17.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/user-pen.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </Pane>
-            <Pane layoutX="103.0" layoutY="278.0" prefHeight="42.0" prefWidth="432.0" styleClass="Account_Setting_Pane" stylesheets="@../style/style.css">
-               <children>
-                  <Label layoutX="57.0" layoutY="5.0" prefHeight="29.0" prefWidth="187.0" text="Theme">
-                     <font>
-                        <Font name="System Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="29.0" fitWidth="22.0" layoutX="15.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/background.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </Pane>
-            <Pane layoutX="103.0" layoutY="333.0" prefHeight="42.0" prefWidth="432.0" styleClass="Account_Setting_Pane" stylesheets="@../style/style.css">
-               <children>
-                  <Label layoutX="56.0" layoutY="6.0" prefHeight="29.0" prefWidth="187.0" text="Security Settings">
-                     <font>
-                        <Font name="System Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="29.0" fitWidth="22.0" layoutX="16.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/shield-check.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </Pane>
-            <Pane layoutX="103.0" layoutY="389.0" prefHeight="42.0" prefWidth="432.0" styleClass="Account_Setting_Pane" stylesheets="@../style/style.css">
-               <children>
-                  <Label layoutX="56.0" layoutY="6.0" prefHeight="29.0" prefWidth="187.0" text="Activity History">
-                     <font>
-                        <Font name="System Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="15.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/time-past%20(1).png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </Pane>
-            <Pane layoutX="104.0" layoutY="442.0" prefHeight="42.0" prefWidth="432.0" styleClass="Account_Setting_Pane" stylesheets="@../style/style.css">
-               <children>
-                  <Label layoutX="56.0" layoutY="6.0" prefHeight="29.0" prefWidth="187.0" text="Localization">
-                     <font>
-                        <Font name="System Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="15.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/search-location.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </Pane>
-            <Pane layoutX="105.0" layoutY="497.0" prefHeight="42.0" prefWidth="432.0" styleClass="Account_Setting_Pane" stylesheets="@../style/style.css">
-               <children>
-                  <Label layoutX="56.0" layoutY="6.0" prefHeight="29.0" prefWidth="187.0" text="Contacts Information">
-                     <font>
-                        <Font name="System Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="15.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/form.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </Pane>
+            <TextField layoutX="103.0" layoutY="225.0" prefHeight="42.0" prefWidth="432.0" promptText="User Name" styleClass="Account_Setting_Pane" stylesheets="@../../style/style.css">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="103.0" layoutY="287.0" prefHeight="42.0" prefWidth="432.0" promptText="E Mail" styleClass="Account_Setting_Pane" stylesheets="@../../style/style.css">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="103.0" layoutY="346.0" prefHeight="42.0" prefWidth="432.0" promptText="Password" styleClass="Account_Setting_Pane" stylesheets="@../../style/style.css">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="btnUpdate" layoutX="239.0" layoutY="436.0" onAction="#btnUpdateOnAction" prefHeight="53.0" prefWidth="188.0" styleClass="update_button" stylesheets="@../../style/style.css" text="UPDATE SETTINGS" textFill="#2800b7">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <ImageView fitHeight="123.0" fitWidth="126.0" layoutX="254.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/reading.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>

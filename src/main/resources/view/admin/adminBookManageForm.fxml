@@ -20,10 +20,10 @@
       <TableView fx:id="tblBookManagement" layoutX="105.0" layoutY="399.0" prefHeight="319.0" prefWidth="974.0">
         <columns>
           <TableColumn fx:id="colBookId" prefWidth="141.60000610351562" text="BOOK ID" />
-          <TableColumn fx:id="colTitle" minWidth="0.0" prefWidth="247.19996643066406" text="TITLE" />
+          <TableColumn fx:id="colBranchName" minWidth="0.0" prefWidth="247.19996643066406" text="BRANCH NAME" />
             <TableColumn fx:id="colAuthor" minWidth="0.0" prefWidth="260.00006103515625" text="AUTHOR" />
-            <TableColumn fx:id="colIsbn" minWidth="0.0" prefWidth="172.79998779296875" text="ISBN" />
-            <TableColumn fx:id="colAvailableCopies" minWidth="0.0" prefWidth="153.60003662109375" text="AVAILABLE COPIES" />
+            <TableColumn fx:id="colBookTitle" minWidth="0.0" prefWidth="172.79998779296875" text="BOOK TITLE" />
+            <TableColumn fx:id="colBookGenre" minWidth="0.0" prefWidth="153.60003662109375" text="BOOK GENRE" />
         </columns>
       </TableView>
       <Pane layoutX="111.0" layoutY="119.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="246.0" prefWidth="973.0" styleClass="Login_Pane" stylesheets="@../../style/style.css">
@@ -33,7 +33,7 @@
                   <Font name="Calibri" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="54.0" layoutY="108.0" prefHeight="18.0" prefWidth="61.0" text="TITLE :">
+            <Label layoutX="54.0" layoutY="108.0" prefHeight="22.0" prefWidth="127.0" text="BRANCH NAME :">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
@@ -43,21 +43,21 @@
                   <Font name="Calibri" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="475.0" layoutY="37.0" prefHeight="18.0" prefWidth="61.0" text="ISBN :">
+            <Label layoutX="475.0" layoutY="37.0" prefHeight="22.0" prefWidth="99.0" text="BOOK TITLE :">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="467.0" layoutY="108.0" prefHeight="22.0" prefWidth="77.0" text=" COPIES :">
+            <Label layoutX="474.0" layoutY="108.0" prefHeight="22.0" prefWidth="115.0" text="BOOK GENRE :">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txtBookId" layoutX="134.0" layoutY="33.0" prefHeight="25.0" prefWidth="242.0" />
-            <TextField fx:id="txtTitle" layoutX="134.0" layoutY="105.0" prefHeight="25.0" prefWidth="242.0" />
-            <TextField fx:id="txtAuthor" layoutX="134.0" layoutY="178.0" prefHeight="25.0" prefWidth="242.0" />
-            <TextField fx:id="txtIsbn" layoutX="544.0" layoutY="34.0" prefHeight="25.0" prefWidth="216.0" />
-            <TextField fx:id="txtCopies" layoutX="546.0" layoutY="105.0" prefHeight="25.0" prefWidth="216.0" />
+            <TextField fx:id="txtBookId" layoutX="188.0" layoutY="33.0" onAction="#btnSearchOnAction" prefHeight="25.0" prefWidth="188.0" />
+            <TextField fx:id="txtBranchName" layoutX="188.0" layoutY="105.0" prefHeight="25.0" prefWidth="188.0" />
+            <TextField fx:id="txtAuthor" layoutX="188.0" layoutY="178.0" prefHeight="25.0" prefWidth="188.0" />
+            <TextField fx:id="txtTitle" layoutX="620.0" layoutY="35.0" prefHeight="25.0" prefWidth="188.0" />
+            <TextField fx:id="txtGenre" layoutX="619.0" layoutY="105.0" prefHeight="25.0" prefWidth="188.0" />
             <JFXButton fx:id="btnAdd" layoutX="844.0" layoutY="36.0" onAction="#btnAddOnAction" prefHeight="27.0" prefWidth="77.0" text="ADD" />
             <JFXButton fx:id="btnUpdate" layoutX="844.0" layoutY="81.0" onAction="#btnUpdateOnAction" prefHeight="27.0" prefWidth="77.0" text="UPDATE" />
             <JFXButton fx:id="btnDelete" layoutX="844.0" layoutY="126.0" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="77.0" text="DELETE" />

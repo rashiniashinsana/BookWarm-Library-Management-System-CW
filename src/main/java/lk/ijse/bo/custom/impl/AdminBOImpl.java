@@ -2,6 +2,7 @@ package lk.ijse.bo.custom.impl;
 
 
 import javafx.collections.ObservableList;
+import lk.ijse.bo.SuperBO;
 import lk.ijse.bo.custom.AdminBO;
 import lk.ijse.dao.DAOFactory;
 import lk.ijse.dao.custom.AdminDAO;
@@ -10,7 +11,7 @@ import lk.ijse.entity.Admin;
 
 import java.util.List;
 
-public class AdminBOImpl implements AdminBO {
+public class AdminBOImpl implements AdminBO, SuperBO {
     private final AdminDAO adminDAO = (AdminDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.ADMIN);
 
     @Override

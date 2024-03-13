@@ -1,6 +1,5 @@
 package lk.ijse.bo.custom.impl;
 
-import jakarta.transaction.TransactionScoped;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import lk.ijse.bo.custom.TransactionBO;

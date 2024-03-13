@@ -3,26 +3,35 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="730.0" prefWidth="1189.0" styleClass="Login_AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.user.UserHistoryManagementController">
+<AnchorPane prefHeight="730.0" prefWidth="1189.0" styleClass="Login_AnchorPane" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.user.UserHistoryManagementController">
    <children>
-      <Label layoutX="97.0" layoutY="56.0" prefHeight="18.0" prefWidth="150.0" text="USER HISTORY">
+      <Label layoutX="97.0" layoutY="56.0" prefHeight="18.0" prefWidth="150.0" text=" HISTORY">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TableView fx:id="tblUserHistory" layoutX="111.0" layoutY="118.0" prefHeight="597.0" prefWidth="974.0">
+      <TableView fx:id="tblUserHistory" layoutX="111.0" layoutY="156.0" prefHeight="560.0" prefWidth="974.0" stylesheets="@../../style/table.css">
          <columns>
-            <TableColumn fx:id="colCardNo" prefWidth="141.60000610351562" text="CARD NO" />
-            <TableColumn fx:id="colTitle" minWidth="0.0" prefWidth="158.40003967285156" text="TITLE" />
-            <TableColumn fx:id="colIsbn" minWidth="0.0" prefWidth="193.5999755859375" text="ISBN" />
-            <TableColumn fx:id="colDateBorrowed" minWidth="0.0" prefWidth="175.2000732421875" text=" DATE BORROWED" />
-            <TableColumn fx:id="colDueDate" minWidth="0.0" prefWidth="184.7999267578125" text="DUE DATE" />
-            <TableColumn fx:id="colStatus" minWidth="0.0" prefWidth="117.60001220703123" text="STATUS" />
+            <TableColumn fx:id="colBookId" prefWidth="132.79999542236328" text="BOOK ID" />
+            <TableColumn fx:id="colBranch" minWidth="0.0" prefWidth="132.0" text="BRANCH" />
+            <TableColumn fx:id="colTitle" minWidth="0.0" prefWidth="143.99990844726562" text="TITLE" />
+            <TableColumn fx:id="colAuthor" minWidth="0.0" prefWidth="141.60003662109375" text="AUTHOR" />
+            <TableColumn fx:id="colGenre" minWidth="0.0" prefWidth="130.4000244140625" text="GENRE" />
+            <TableColumn fx:id="colStatus" minWidth="0.0" prefWidth="141.60003662109375" text="STATUS" />
+            <TableColumn fx:id="colDateTime" minWidth="0.0" prefWidth="152.7999267578125" text="ADDED DATE &amp; TIME" />
          </columns>
       </TableView>
+      <TextField fx:id="txtsearch" layoutX="121.0" layoutY="103.0" onAction="#btnSearchOnAction" prefHeight="35.0" prefWidth="230.0" promptText="      Search" styleClass="delete_button" stylesheets="@../../style/style.css" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="317.0" layoutY="103.0" onMouseClicked="#btnSearchOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/report%20(1).png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

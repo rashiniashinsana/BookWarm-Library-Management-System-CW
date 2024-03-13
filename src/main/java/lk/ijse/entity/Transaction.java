@@ -2,7 +2,6 @@ package lk.ijse.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.io.Serializable;
 import java.sql.*;
 
@@ -12,7 +11,7 @@ import java.sql.*;
 
 @Entity
 @Table(name = "transaction")
-public abstract class Transaction implements Serializable {
+public class Transaction implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,10 +31,6 @@ public abstract class Transaction implements Serializable {
 
     private String status;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
-
     public Transaction(String userName, String bookTitle, String branch, Date borrowing, Date returning) {
         this.userName = userName;
         this.bookTitle = bookTitle;
@@ -43,6 +38,5 @@ public abstract class Transaction implements Serializable {
         this.borrowing = borrowing;
         this.returning = returning;
     }
-
 
 }

@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="Login_AnchorPane" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="Login_AnchorPane" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.admin.AdminLoginFormController">
    <children>
       <Pane layoutX="57.0" layoutY="19.0" prefHeight="682.0" prefWidth="1168.0" styleClass="Login_Pane" stylesheets="@../../style/style.css">
          <padding>
@@ -26,7 +26,7 @@
          <children>
             <Pane layoutX="35.0" layoutY="14.0" prefHeight="654.0" prefWidth="503.0" styleClass="Login_img" stylesheets="@../../style/style.css">
                <children>
-                  <ImageView fitHeight="645.0" fitWidth="609.0" layoutX="3.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="647.0" fitWidth="496.0" layoutX="3.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../assets/Default_E_library_management_system_for_students_3.jpg" />
                      </image>
@@ -44,7 +44,7 @@
                </font>
             </Label>
             <TextField fx:id="textUserName" layoutX="36.0" layoutY="128.0" prefHeight="26.0" prefWidth="296.0" promptText="Enter Your Username" />
-            <Button fx:id="btnLogin" layoutX="36.0" layoutY="235.0" mnemonicParsing="false" onAction="#btnloginOnAction" prefHeight="38.0" prefWidth="293.0" stylesheets="@../../style/style.css" text="LOGIN">
+            <Button fx:id="btnLogin" layoutX="36.0" layoutY="235.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="38.0" prefWidth="293.0" stylesheets="@../../style/style.css" text="LOGIN">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -68,9 +68,9 @@
             <Text fx:id="txtSupport" layoutX="164.0" layoutY="452.05078125" strokeType="OUTSIDE" strokeWidth="0.0" text="Support" wrappingWidth="45.336700439453125" />
             <Text fx:id="txtCCare" layoutX="225.0" layoutY="452.05078125" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Care" wrappingWidth="107.73672485351562" />
             <PasswordField fx:id="txtPassword" layoutX="36.0" layoutY="176.0" prefHeight="26.0" prefWidth="296.0" promptText="Enter Your Password" />
-            <Hyperlink fx:id="txtForgotPassword" layoutX="35.0" layoutY="317.0" onAction="#txtForgotPasswordOnAction" prefHeight="24.0" prefWidth="198.0" text="Forgot Password?" />
-            <Text layoutX="36.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already Registered?" />
-            <Hyperlink fx:id="txtLogin" layoutX="144.0" layoutY="280.0" onAction="#txtLoginOnAction" text="Login" />
+            <Hyperlink fx:id="txtForgotPassword" layoutX="35.0" layoutY="317.0" onAction="#txtForgotPasswordOnAction" prefHeight="24.0" prefWidth="108.0" text="Forgot Password?" />
+            <Text layoutX="36.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Account ?" wrappingWidth="92.3170166015625" />
+            <Hyperlink fx:id="txtSignUp" layoutX="130.0" layoutY="280.0" onAction="#txtSignUpOnAction" text="SignUp" />
          </children>
       </Pane>
    </children>

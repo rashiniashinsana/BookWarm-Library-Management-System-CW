@@ -25,16 +25,16 @@ public class AdminBookManagementController {
     private TableColumn<?, ?> colAuthor;
 
     @FXML
-    private TableColumn<?, ?> colAvailableCopies;
+    private TableColumn<?, ?> colBookGenre;
 
     @FXML
     private TableColumn<?, ?> colBookId;
 
     @FXML
-    private TableColumn<?, ?> colIsbn;
+    private TableColumn<?, ?> colBookTitle;
 
     @FXML
-    private TableColumn<?, ?> colTitle;
+    private TableColumn<?, ?> colBranchName;
 
     @FXML
     private TableView<?> tblBookManagement;
@@ -46,10 +46,10 @@ public class AdminBookManagementController {
     private TextField txtBookId;
 
     @FXML
-    private TextField txtCopies;
+    private TextField txtBranchName;
 
     @FXML
-    private TextField txtIsbn;
+    private TextField txtGenre;
 
     @FXML
     private TextField txtTitle;
@@ -60,7 +60,17 @@ public class AdminBookManagementController {
     }
 
     @FXML
+    void btnClearOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
     void btnDeleteOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnSearchOnAction(ActionEvent event) {
 
     }
 
@@ -69,9 +79,5 @@ public class AdminBookManagementController {
 
     }
 
-    @FXML
-    void btnClearOnAction(ActionEvent event) {
-
-    }
-
 }
+
