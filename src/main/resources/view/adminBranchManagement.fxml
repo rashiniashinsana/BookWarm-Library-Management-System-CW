@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1189.0" styleClass="Login_AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.admin.AdminBranchManagementController">
+   <children>
+      <Label layoutX="65.0" layoutY="52.0" text="BRANCH MANAGEMENT">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblBranchId" layoutX="105.0" layoutY="399.0" prefHeight="319.0" prefWidth="974.0">
+         <columns>
+            <TableColumn fx:id="colBranchId" prefWidth="117.59998321533203" text="BRANCH ID" />
+            <TableColumn fx:id="colBranchName" minWidth="0.0" prefWidth="151.20004272460938" text="BRANCH NAME" />
+            <TableColumn fx:id="colAddress" minWidth="0.0" prefWidth="235.80001831054688" text="ADDRESS" />
+            <TableColumn fx:id="colCity" minWidth="0.0" prefWidth="132.39996337890625" text="CITY" />
+            <TableColumn fx:id="colPhoneNumber" prefWidth="161.5999755859375" text="PHONE NUM" />
+            <TableColumn fx:id="colStatus" prefWidth="173.60001220703123" text="STATUS" />
+         </columns>
+      </TableView>
+      <Pane layoutX="111.0" layoutY="119.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="246.0" prefWidth="973.0" styleClass="Login_Pane" stylesheets="@../style/style.css">
+         <children>
+            <Label layoutX="54.0" layoutY="60.0" prefHeight="22.0" prefWidth="98.0" text="BRANCH ID :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtBranchId" layoutX="191.0" layoutY="60.0" onAction="#btnSearchOnAction" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="54.0" layoutY="111.0" prefHeight="22.0" prefWidth="122.0" text="BRANCH NAME :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtBranchName" layoutX="191.0" layoutY="111.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="474.0" layoutY="112.0" prefHeight="22.0" prefWidth="106.0" text="PHONE NUM :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPhoneNum" layoutX="595.0" layoutY="112.0" prefHeight="25.0" prefWidth="228.0" />
+            <Label layoutX="476.0" layoutY="161.0" prefHeight="22.0" prefWidth="90.0" text="STATUS :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnAdd" layoutX="844.0" layoutY="36.0" onAction="#btnAddOnAction" prefHeight="27.0" prefWidth="77.0" text="ADD" />
+            <JFXButton fx:id="btnUpdate" layoutX="844.0" layoutY="81.0" onAction="#btnUpdateOnAction" prefHeight="27.0" prefWidth="77.0" text="UPDATE" />
+            <JFXButton fx:id="btnDelete" layoutX="844.0" layoutY="126.0" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="77.0" text="DELETE" />
+            <JFXButton fx:id="btnClear" layoutX="844.0" layoutY="171.0" onAction="#btnClearOnAction" prefHeight="27.0" prefWidth="77.0" text="CLEAR" />
+            <TextField fx:id="txtStatus" layoutX="595.0" layoutY="161.0" prefHeight="25.0" prefWidth="228.0" />
+            <Label layoutX="54.0" layoutY="161.0" prefHeight="22.0" prefWidth="90.0" text="ADDRESS : ">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="478.0" layoutY="63.0" prefHeight="22.0" prefWidth="52.0" text="CITY :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCity" layoutX="594.0" layoutY="61.0" prefHeight="26.0" prefWidth="228.0" />
+            <TextField fx:id="txtAddress" layoutX="191.0" layoutY="161.0" prefHeight="25.0" prefWidth="185.0" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="58.0" fitWidth="61.0" layoutX="370.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/international.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
