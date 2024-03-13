@@ -12,7 +12,7 @@ import java.sql.*;
 
 @Entity
 @Table(name = "transaction")
-public class Transaction implements Serializable {
+public abstract class Transaction implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

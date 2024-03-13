@@ -72,8 +72,8 @@ public class TransactionDAOImpl implements TransactionDAO{
             updateSession.close();
             return false;
         }
-        updateTransaction.commit();
-        updateSession.close();
-        return true;
+            updateTransaction.commit();
+            updateSession.close();
+            return true;
     }
 }
