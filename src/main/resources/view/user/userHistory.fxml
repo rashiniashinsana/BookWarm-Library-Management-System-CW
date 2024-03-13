@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="730.0" prefWidth="1189.0" styleClass="Login_AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.user.UserHistoryManagementController">
+   <children>
+      <Label layoutX="97.0" layoutY="56.0" prefHeight="18.0" prefWidth="150.0" text="USER HISTORY">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblUserHistory" layoutX="111.0" layoutY="118.0" prefHeight="597.0" prefWidth="974.0">
+         <columns>
+            <TableColumn fx:id="colCardNo" prefWidth="141.60000610351562" text="CARD NO" />
+            <TableColumn fx:id="colTitle" minWidth="0.0" prefWidth="158.40003967285156" text="TITLE" />
+            <TableColumn fx:id="colIsbn" minWidth="0.0" prefWidth="193.5999755859375" text="ISBN" />
+            <TableColumn fx:id="colDateBorrowed" minWidth="0.0" prefWidth="175.2000732421875" text=" DATE BORROWED" />
+            <TableColumn fx:id="colDueDate" minWidth="0.0" prefWidth="184.7999267578125" text="DUE DATE" />
+            <TableColumn fx:id="colStatus" minWidth="0.0" prefWidth="117.60001220703123" text="STATUS" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

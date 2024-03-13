@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1189.0" styleClass="Login_AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.admin.AdminUserManagementController">
+   <children>
+      <Label layoutX="55.0" layoutY="42.0" text="USER MANAGEMENT">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblUserManagement" layoutX="105.0" layoutY="399.0" prefHeight="319.0" prefWidth="974.0">
+         <columns>
+            <TableColumn fx:id="colUserID" prefWidth="141.60000610351562" text="USER ID" />
+            <TableColumn fx:id="colUserName" minWidth="0.0" prefWidth="247.19996643066406" text="USER NAME" />
+            <TableColumn fx:id="colPassword" minWidth="0.0" prefWidth="172.79998779296875" text="PASSWORD" />
+            <TableColumn fx:id="colFirstName" minWidth="0.0" prefWidth="196.7999267578125" text="FIRST NAME" />
+            <TableColumn fx:id="colLastName" minWidth="0.0" prefWidth="219.20001220703125" text="LAST NAME" />
+         </columns>
+      </TableView>
+      <Pane layoutX="111.0" layoutY="119.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="246.0" prefWidth="973.0" styleClass="Login_Pane" stylesheets="@../style/style.css">
+         <children>
+            <Label layoutX="54.0" layoutY="37.0" prefHeight="22.0" prefWidth="77.0" text="USER ID :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="108.0" prefHeight="22.0" prefWidth="103.0" text="USER NAME :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="182.0" prefHeight="22.0" prefWidth="97.0" text="PASSWORD :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="470.0" layoutY="39.0" prefHeight="22.0" prefWidth="115.0" text="FIRST NAME :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="467.0" layoutY="108.0" prefHeight="22.0" prefWidth="115.0" text="LAST NAME :">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUserName" layoutX="160.0" layoutY="108.0" prefHeight="25.0" prefWidth="216.0" />
+            <TextField fx:id="txtPassword" layoutX="160.0" layoutY="183.0" prefHeight="25.0" prefWidth="216.0" />
+            <TextField fx:id="txtFirstName" layoutX="585.0" layoutY="38.0" prefHeight="25.0" prefWidth="216.0" />
+            <TextField fx:id="txtLastName" layoutX="585.0" layoutY="108.0" prefHeight="25.0" prefWidth="216.0" />
+            <JFXButton fx:id="btnAdd" layoutX="844.0" layoutY="36.0" onAction="#btnAddOnAction" prefHeight="27.0" prefWidth="77.0" text="ADD" />
+            <JFXButton fx:id="btnUpdate" layoutX="844.0" layoutY="81.0" onAction="#btnUpdateOnAction" prefHeight="27.0" prefWidth="77.0" text="UPDATE" />
+            <JFXButton fx:id="btnDelete" layoutX="844.0" layoutY="126.0" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="77.0" text="DELETE" />
+            <JFXButton fx:id="btnClear" layoutX="844.0" layoutY="171.0" onAction="#btnClearOnAction" prefHeight="27.0" prefWidth="77.0" text="CLEAR" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="58.0" fitWidth="61.0" layoutX="318.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/group%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

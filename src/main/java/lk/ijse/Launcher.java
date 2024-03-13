@@ -18,7 +18,7 @@ public class Launcher extends Application {
     }
 
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/view/Login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/view/admin/adminLoginForm.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Manage Form");
         stage.setResizable(false);
