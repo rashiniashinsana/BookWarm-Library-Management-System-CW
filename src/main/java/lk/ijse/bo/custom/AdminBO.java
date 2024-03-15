@@ -1,10 +1,11 @@
 package lk.ijse.bo.custom;
 
 import javafx.collections.ObservableList;
+import lk.ijse.bo.SuperBO;
 import lk.ijse.dto.AdminDTO;
 import lk.ijse.entity.Admin;
 
-public interface AdminBO {
+public interface AdminBO extends SuperBO {
 
     boolean saveAdmin(AdminDTO dto) throws Exception;
 

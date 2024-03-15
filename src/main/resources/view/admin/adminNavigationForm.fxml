@@ -97,7 +97,7 @@
       </Pane>
       <Pane fx:id="NavigationPane" layoutX="104.0" layoutY="8.0" prefHeight="730.0" prefWidth="1189.0" styleClass="AdminDashboard_Pane" stylesheets="@../../style/style.css">
          <children>
-            <Label layoutX="76.0" layoutY="32.0" text="DASHBOARD">
+            <Label fx:id="lblDashboard" layoutX="76.0" layoutY="32.0" text="DASHBOARD">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -255,6 +255,13 @@
             </Pane>
          </children>
       </Pane>
+      <Label fx:id="lblTime" layoutX="1018.0" layoutY="13.0" prefHeight="44.0" prefWidth="176.0" text="Label" />
+      <Label fx:id="lblDate" layoutX="1049.0" layoutY="51.0" prefHeight="26.0" prefWidth="146.0" styleClass="dateLabel" stylesheets="@../../../../../../Completed%20Intellij/BookWorm_LMS-master%20(1)/BookWorm_LMS-master/src/main/resources/style/book-manage-form.css" text="Label" />
+      <Label fx:id="lblTitle" layoutX="526.0" layoutY="27.0" prefHeight="44.0" prefWidth="233.0" styleClass="title" text="WELCOME BRANCH" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
    </children>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

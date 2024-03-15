@@ -9,5 +9,7 @@ public interface TransactionDAO extends CrudDAO<Transaction> {
 
     ObservableList<Transaction> getUserTransaction(String user, String status);
 
+    ObservableList<Transaction> getBranchTransaction(String branch);
+
     boolean updateStatus(int id,String status);
 }

@@ -87,29 +87,6 @@ public class AdminLoginFormController {
         }
     }
 
-    private boolean validateAdmin() {
-        String name = textUserName.getText();
-        boolean isFirstNameValidated = Pattern.compile("^[A-Za-z]{1,20}$").matcher(name).matches();
-
-        if (!isFirstNameValidated) {
-            new Alert(Alert.AlertType.WARNING, "Please enter a valid user name").show();
-            textUserName.setStyle("-fx-border-color:#ff0000;");
-            textUserName.requestFocus();
-            return false;
-        }
-
-        String password = txtPassword.getText();
-        boolean isPasswordValidated = Pattern.compile("^[A-Za-z0-9+_.-]{4,20}$").matcher(password).matches();
-
-        if (!isPasswordValidated) {
-            new Alert(Alert.AlertType.WARNING, "Please enter a valid password").show();
-            txtPassword.setStyle("-fx-border-color:#ff0000;");
-            txtPassword.requestFocus();
-            return false;
-        }
-        return true;
-
-    }
 
     @FXML
     void txtForgotPasswordOnAction(ActionEvent event) {
@@ -131,6 +108,28 @@ public class AdminLoginFormController {
     }
 
 
+    private boolean validateAdmin(){
+        String name = textUserName.getText();
+        boolean isFirstNameValidated = Pattern.compile("^[A-Za-z]{1,20}$").matcher(name).matches();
+
+        if (!isFirstNameValidated) {
+            new Alert(Alert.AlertType.WARNING, "Please enter a valid user name").show();
+            textUserName.setStyle("-fx-border-color:#ff0000;");
+            textUserName.requestFocus();
+            return false;
+        }
+
+        String password = txtPassword.getText();
+        boolean isPasswordValidated = Pattern.compile("^[A-Za-z0-9+_.-]{4,20}$").matcher(password).matches();
+
+        if (!isPasswordValidated) {
+            new Alert(Alert.AlertType.WARNING, "Please enter a valid password").show();
+            txtPassword.setStyle("-fx-border-color:#ff0000;");
+            txtPassword.requestFocus();
+            return false;
+        }
+        return true;
+    }
     private void addDefaultAdmin() {
 
         AdminDTO adminDTO = new AdminDTO("sandun","1234");

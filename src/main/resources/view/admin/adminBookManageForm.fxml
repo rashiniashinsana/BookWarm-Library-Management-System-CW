@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="730.0" prefWidth="1189.0" styleClass="Login_AnchorPane" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.admin.AdminBookManagementController">
    <children>
-      <Label layoutX="45.0" layoutY="32.0" text="BOOK MANAGEMENT">
+      <Label fx:id="lblBookManagement" layoutX="45.0" layoutY="32.0" text="BOOK MANAGEMENT">
          <font>
             <Font name="System Bold" size="24.0" />
          </font></Label>
@@ -69,5 +69,7 @@
             <Image url="@../../assets/study.png" />
          </image>
       </ImageView>
+      <Label fx:id="lblTime" layoutX="1018.0" layoutY="13.0" prefHeight="44.0" prefWidth="176.0" text="Label" />
+      <Label fx:id="lblDate" layoutX="1049.0" layoutY="51.0" prefHeight="26.0" prefWidth="146.0" styleClass="dateLabel" stylesheets="@../../../../../../Completed%20Intellij/BookWorm_LMS-master%20(1)/BookWorm_LMS-master/src/main/resources/style/book-manage-form.css" text="Label" />
    </children>
 </AnchorPane>

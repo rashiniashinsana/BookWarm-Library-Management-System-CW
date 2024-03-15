@@ -16,9 +16,10 @@ public class SessionFactoryConfig {
         StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().loadProperties("hibernate.properties").build();
         Metadata metadata = new MetadataSources(serviceRegistry).
                 addAnnotatedClass(User.class).
+                addAnnotatedClass(BookTransaction.class).
+                addAnnotatedClass(Transaction.class).
                 addAnnotatedClass(Book.class).
                 addAnnotatedClass(Branch.class).
-                addAnnotatedClass(Transaction.class).
                 addAnnotatedClass(Admin.class).
                 getMetadataBuilder().build();
         sessionFactory = metadata.buildSessionFactory();

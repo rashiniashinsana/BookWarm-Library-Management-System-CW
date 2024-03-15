@@ -3,6 +3,7 @@ package lk.ijse.controller.admin;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
@@ -11,6 +12,7 @@ import javafx.scene.layout.Pane;
 
 public class AdminNavigationController {
 
+    public static String branchName;
     @FXML
     private Pane NavigationPane;
 
@@ -58,6 +60,16 @@ public class AdminNavigationController {
 
     @FXML
     private TableView<?> tblBookManagement;
+
+    @FXML
+    private Label lblDate;
+
+    @FXML
+    private Label lblTime;
+
+    @FXML
+    private Label lblDashboard;
+
 
     @FXML
     void btnBookManagementOnAction(MouseEvent event) {

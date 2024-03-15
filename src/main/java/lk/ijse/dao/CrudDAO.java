@@ -1,8 +1,8 @@
 package lk.ijse.dao;
 
 
+import javafx.collections.ObservableList;
 import lk.ijse.entity.Book;
-import lk.ijse.entity.Branch;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ public interface CrudDAO<T> extends SuperDAO{
 
     boolean update(String id , T dto) throws Exception;
 
-    Book search(String id) throws Exception;
+    T search(String id) throws Exception;
 
-    List<Branch> loadAll() throws Exception;
+    ObservableList<T> loadAll() throws Exception;
 }

@@ -1,9 +1,9 @@
 package lk.ijse.dao.custom.impl;
 
+import javafx.collections.ObservableList;
 import lk.ijse.config.SessionFactoryConfig;
 import lk.ijse.dao.custom.UserDAO;
 import lk.ijse.entity.Book;
-import lk.ijse.entity.Branch;
 import lk.ijse.entity.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -49,12 +49,12 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public Book search(String id) throws Exception {
+    public User search(String id) throws Exception {
         return null;
     }
 
     @Override
-    public List<Branch> loadAll() throws Exception {
+    public ObservableList<User> loadAll() throws Exception {
         return null;
     }
 

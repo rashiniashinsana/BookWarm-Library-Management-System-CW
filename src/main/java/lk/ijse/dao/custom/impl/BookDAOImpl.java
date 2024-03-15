@@ -5,7 +5,6 @@ import javafx.collections.*;
 import lk.ijse.config.SessionFactoryConfig;
 import lk.ijse.dao.custom.BookDAO;
 import lk.ijse.entity.Book;
-import lk.ijse.entity.Branch;
 import org.hibernate.*;
 import org.hibernate.query.Query;
 
@@ -71,7 +70,7 @@ public class BookDAOImpl implements BookDAO {
     }
 
     @Override
-    public List<Branch> loadAll() {
+    public ObservableList<Book> loadAll() {
         ObservableList<Book> allBookList = FXCollections.observableArrayList();
         Session loadSession = SessionFactoryConfig.getInstance().getSession();
         CriteriaQuery<Book> criteriaQuery = loadSession.getCriteriaBuilder().createQuery(Book.class);

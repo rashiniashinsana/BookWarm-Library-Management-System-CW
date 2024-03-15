@@ -1,6 +1,7 @@
 package lk.ijse.bo;
 
 import lk.ijse.bo.custom.impl.*;
+import lk.ijse.bo.custom.impl.TransactionBOImpl;
 
 public class BOFactory {
     private static BOFactory boFactory;
@@ -23,9 +24,9 @@ public class BOFactory {
             case ADMIN:
                 return new AdminBOImpl();
             case BRANCH:
-                //return new BranchBOImpl();
+                return new BranchBOImpl();
             case BOOK:
-               // return new BookBOImpl();
+                return new BookBOImpl();
             case TRANSACTION:
                 return new TransactionBOImpl();
             default:

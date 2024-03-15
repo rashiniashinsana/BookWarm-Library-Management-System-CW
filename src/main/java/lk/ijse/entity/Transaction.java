@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.io.Serializable;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -30,6 +32,9 @@ public class Transaction implements Serializable {
     private Date returning;
 
     private String status;
+
+    @OneToMany(mappedBy = "transactions")
+    private List<BookTransaction> bookTransactions = new ArrayList<>();
 
     public Transaction(String userName, String bookTitle, String branch, Date borrowing, Date returning) {
         this.userName = userName;

@@ -1,25 +1,35 @@
 package lk.ijse.controller;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
-import javafx.scene.input.MouseEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class MainLoginFormController {
 
     @FXML
-    private JFXButton btnAdmin;
+    private AnchorPane pane;
 
     @FXML
-    private JFXButton btnUser;
-
-    @FXML
-    void btnAdminOnAction(MouseEvent event) {
-
+    private void btnAdminOnAction() {
+        pane.getChildren().clear();
+        try {
+            AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("/view/admin/adminLoginForm.fxml"));
+            pane.getChildren().add(anchorPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
-    void btnUserOnAction(MouseEvent event) {
-
+    private void btnUserOnAction() {
+        pane.getChildren().clear();
+        try {
+            AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("/view/user/userLoginForm.fxml"));
+            pane.getChildren().add(anchorPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
 }

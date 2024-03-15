@@ -1,9 +1,7 @@
 package lk.ijse.bo.custom.impl;
 
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.Alert;
 import lk.ijse.bo.custom.BookBO;
 import lk.ijse.dao.DAOFactory;
 import lk.ijse.dao.custom.BookDAO;
@@ -59,7 +57,7 @@ public class BookBOImpl implements BookBO {
     }
 
     @Override
-    public ObservableList<BookDTO> getAllBooks(String branch) throws Exception {
+    public ObservableList<BookDTO> getAllBooks(String branch) {
         List<Book> bookList = bookDAO.getAllBooks(branch);
         List<BookDTO> bookDTOS = new ArrayList<>();
         for (Book book : bookList){
@@ -78,6 +76,7 @@ public class BookBOImpl implements BookBO {
 
     @Override
     public ObservableList<BookDTO> loadAllBooks() throws Exception {
+       // List<Book> bookList = bookDAO.loadAll();
         List<Book> bookList = bookDAO.loadAll();
         List<BookDTO> bookDTOS = new ArrayList<>();
         for (Book book : bookList){

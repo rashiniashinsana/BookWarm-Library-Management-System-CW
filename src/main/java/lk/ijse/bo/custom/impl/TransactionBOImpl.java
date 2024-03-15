@@ -18,13 +18,16 @@ public class TransactionBOImpl implements TransactionBO {
     @Override
     public boolean saveTransaction(TransactionDTO dto) throws Exception {
         return transactionDAO.save(new Transaction(
-                dto.getUserName(),
-                dto.getBookTitle(),
-                dto.getBranch(),
-                dto.getBorrowing(),
-                dto.getReturning()
-        ) {
-        });
+
+//                dto.getId(),
+//                dto.getBranch(),
+//                dto.getBookTitle(),
+//                dto.getUserName(),
+//                dto.getBorrowing(),
+//                dto.getReturning(),
+//                dto.getStatus()
+//
+        ));
     }
 
     @Override
@@ -44,7 +47,20 @@ public class TransactionBOImpl implements TransactionBO {
 
     @Override
     public ObservableList<TransactionDTO> getAllTransaction() throws Exception {
-        return null;
+        List<Transaction> transactionList = transactionDAO.loadAll();
+        List<TransactionDTO> transactionDTOS = new ArrayList<>();
+        for (Transaction transaction : transactionList) {
+            transactionDTOS.add(new TransactionDTO(
+                    transaction.getId(),
+                    transaction.getBranch(),
+                    transaction.getBookTitle(),
+                    transaction.getUserName(),
+                    transaction.getBorrowing(),
+                    transaction.getReturning(),
+                    transaction.getStatus()
+            ));
+        }
+        return FXCollections.observableArrayList(transactionDTOS);
     }
 
     @Override
@@ -68,5 +84,23 @@ public class TransactionBOImpl implements TransactionBO {
     @Override
     public boolean updateStatus(int id, String status) throws Exception {
         return transactionDAO.updateStatus(id,status);
+    }
+
+    @Override
+    public ObservableList<TransactionDTO> getBranchTransaction(String branch) {
+        List<Transaction> transactionList = transactionDAO.getBranchTransaction(branch);
+        List<TransactionDTO> transactionDTOS = new ArrayList<>();
+        for (Transaction transaction : transactionList) {
+            transactionDTOS.add(new TransactionDTO(
+                    transaction.getId(),
+                    transaction.getBranch(),
+                    transaction.getBookTitle(),
+                    transaction.getUserName(),
+                    transaction.getBorrowing(),
+                    transaction.getReturning(),
+                    transaction.getStatus()
+            ));
+        }
+        return FXCollections.observableArrayList(transactionDTOS);
     }
 }

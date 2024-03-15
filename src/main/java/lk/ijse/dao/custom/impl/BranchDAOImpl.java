@@ -6,7 +6,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import lk.ijse.config.SessionFactoryConfig;
 import lk.ijse.dao.custom.BranchDAO;
-import lk.ijse.entity.Book;
 import lk.ijse.entity.Branch;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -62,7 +61,7 @@ public class BranchDAOImpl implements BranchDAO {
     }
 
     @Override
-    public Book search(String id) {
+    public Branch search(String id) {
         Session searchSession = SessionFactoryConfig.getInstance().getSession();
         Transaction searchTransaction = searchSession.beginTransaction();
         Branch getBranches = searchSession.get(Branch.class,id);
@@ -72,7 +71,7 @@ public class BranchDAOImpl implements BranchDAO {
     }
 
     @Override
-    public List<Branch> loadAll() {
+    public ObservableList<Branch> loadAll() {
         ObservableList<Branch> allBranchList = FXCollections.observableArrayList();
         Session loadSession = SessionFactoryConfig.getInstance().getSession();
         CriteriaQuery<Branch> criteriaQuery = loadSession.getCriteriaBuilder().createQuery(Branch.class);

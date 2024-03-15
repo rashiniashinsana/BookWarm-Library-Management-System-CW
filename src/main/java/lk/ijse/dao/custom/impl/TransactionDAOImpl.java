@@ -1,17 +1,16 @@
 package lk.ijse.dao.custom.impl;
 
-
 import javafx.collections.FXCollections;
+
 import javafx.collections.ObservableList;
 import lk.ijse.config.SessionFactoryConfig;
 import lk.ijse.dao.custom.TransactionDAO;
-import lk.ijse.entity.Book;
-import lk.ijse.entity.Branch;
 import lk.ijse.entity.Transaction;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
-import java.util.List;
-//import org.hibernate.Transaction;
+
+import java.sql.Date;
+import java.time.LocalDate;
 
 public class TransactionDAOImpl implements TransactionDAO{
 
@@ -36,13 +35,20 @@ public class TransactionDAOImpl implements TransactionDAO{
     }
 
     @Override
-    public Book search(String id) throws Exception {
+    public Transaction search(String id) throws Exception {
         return null;
     }
 
     @Override
-    public List<Branch> loadAll() throws Exception {
-        return null;
+    public ObservableList<Transaction> loadAll() {
+        ObservableList<Transaction> transactions = FXCollections.observableArrayList();
+        try (Session session = SessionFactoryConfig.getInstance().getSession()) {
+            Query<Transaction> query = session.createQuery("FROM Transaction WHERE returning < CURRENT_DATE", Transaction.class);
+            transactions.addAll(query.getResultList());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return transactions;
     }
 
     @Override
@@ -60,21 +66,34 @@ public class TransactionDAOImpl implements TransactionDAO{
     }
 
     @Override
+    public ObservableList<Transaction> getBranchTransaction(String branch) {
+        ObservableList<Transaction> transactions = FXCollections.observableArrayList();
+        try (Session session = SessionFactoryConfig.getInstance().getSession()) {
+            Query<Transaction> query = session.createQuery("FROM Transaction WHERE branch = :branch", Transaction.class);
+            query.setParameter("branch", branch);
+            transactions.addAll(query.getResultList());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return transactions;
+    }
+
+    @Override
     public boolean updateStatus(int id, String status) {
         Session updateSession = SessionFactoryConfig.getInstance().getSession();
-        org.hibernate.Transaction updateTransaction = updateSession.beginTransaction();
-        //Transaction updateTransaction = (Transaction) updateSession.beginTransaction();
+        Transaction updateTransaction = (Transaction) updateSession.beginTransaction();
         Transaction existingTransaction = updateSession.get(Transaction.class, id);
         if (existingTransaction!= null) {
             existingTransaction.setStatus(status);
+            existingTransaction.setReturning(Date.valueOf(LocalDate.now()));
             updateSession.merge(existingTransaction);
         } else {
-            updateTransaction.commit();
+            //updateTransaction.commit();
             updateSession.close();
             return false;
         }
-            updateTransaction.commit();
-            updateSession.close();
-            return true;
+        //updateTransaction.commit();
+        updateSession.close();
+        return true;
     }
 }

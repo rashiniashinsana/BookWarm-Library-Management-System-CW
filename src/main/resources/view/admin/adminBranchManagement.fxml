@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="730.0" prefWidth="1189.0" styleClass="Login_AnchorPane" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.admin.AdminBranchManagementController">
+<AnchorPane fx:id="pane" prefHeight="730.0" prefWidth="1189.0" styleClass="Login_AnchorPane" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.admin.AdminBranchManagementController">
    <children>
       <Label layoutX="65.0" layoutY="52.0" text="BRANCH MANAGEMENT">
          <font>
@@ -46,7 +46,7 @@
                   <Font name="Calibri" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txtPhoneNum" layoutX="583.0" layoutY="111.0" prefHeight="25.0" prefWidth="228.0" />
+            <TextField fx:id="txtEmail" layoutX="583.0" layoutY="111.0" prefHeight="25.0" prefWidth="228.0" />
             <JFXButton fx:id="btnAdd" layoutX="844.0" layoutY="36.0" onAction="#btnAddOnAction" prefHeight="27.0" prefWidth="77.0" text="ADD" />
             <JFXButton fx:id="btnUpdate" layoutX="844.0" layoutY="81.0" onAction="#btnUpdateOnAction" prefHeight="27.0" prefWidth="77.0" text="UPDATE" />
             <JFXButton fx:id="btnDelete" layoutX="844.0" layoutY="126.0" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="77.0" text="DELETE" />

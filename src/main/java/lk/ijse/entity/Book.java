@@ -6,6 +6,8 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -32,6 +34,13 @@ public class Book implements Serializable {
 
     @CreationTimestamp
     private Timestamp dateTime;
+
+    @ManyToOne
+    @JoinColumn(name = "branch_id")
+    private Branch branch;
+
+    @OneToMany(mappedBy = "book")
+    private List<Transaction> bookTransaction = new ArrayList<>();
 
     public Book(String branchName, String author, String title, String genre, String status) {
         this.branchName = branchName;
